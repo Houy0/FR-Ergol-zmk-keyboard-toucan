@@ -3,12 +3,24 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define BASE 0
-#define NAV  1
-#define SYM  2
-#define ADJ  3
 
-/ {
+// Layer definitions
+#define BASE 0
+#define SHT 1
+#define ACCENT 2
+#define NUM 3
+#define EXT 4
+#define FNC 5
+#define SETTINGS 6
+// -----------------
+
+&sk {
+	// don't release mods on other mods presses
+	ignore-modifiers;
+};
+
+
+/* {
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
@@ -16,6 +28,336 @@
             then-layer = <3>;
         };
     };
+*/
+
+/ {
+	behaviors {
+
+		// Enables switching between layers Accent and Numbers
+		// by performing a tap-dance sequence.
+		td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <350>;
+            bindings = <&sl ACCENT>, <&sl NUM>;
+        };
+
+		// Enables switching between layers EXT and Function
+		// by performing a tap-dance sequence.
+		td1: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <500>;
+            bindings = <&sl EXT>, <&sl FNC>;
+        };
+
+
+		// Enables holding the first mod-tap key
+		// by performing a tap-release-hold sequence.
+		// To use it: "&qt KEYCODE1 KEYCODE2"
+		qt: quick_tap {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			flavor = "tap-preferred";
+			tapping-term-ms = <200>;
+			quick-tap-ms = <200>;
+			bindings = <&kp>, <&kp>;
+		};
+
+
+		// Majuscules accentuées
+
+		// Hold tap on accents to Maj
+		aMgrav: aMgrav { 
+            compatible = "zmk,behavior-hold-tap"; 
+            #binding-cells = <2>; 
+            tapping-term-ms = <350>; 
+            flavor = "tap-preferred"; 
+            quick-tap-ms = <200>; 
+            bindings = <&a_M_grav> , <&kp>;
+        };
+		iMcirc: iMcirc { 
+            compatible = "zmk,behavior-hold-tap"; 
+            #binding-cells = <2>; 
+            tapping-term-ms = <350>; 
+            flavor = "tap-preferred"; 
+            quick-tap-ms = <200>; 
+            bindings = <&i_M_circ> , <&i_circ>;
+        };
+		oMcirc: oMcirc { 
+            compatible = "zmk,behavior-hold-tap"; 
+            #binding-cells = <2>; 
+            tapping-term-ms = <350>; 
+            flavor = "tap-preferred"; 
+            quick-tap-ms = <200>; 
+            bindings = <&o_M_circ> , <&o_circ>;
+        };
+		eMcirc: eMcirc { 
+            compatible = "zmk,behavior-hold-tap"; 
+            #binding-cells = <2>; 
+            tapping-term-ms = <350>; 
+            flavor = "tap-preferred"; 
+            quick-tap-ms = <200>; 
+            bindings = <&e_M_circ> , <&e_circ>;
+        };
+		eMeacu: eMeacu { 
+            compatible = "zmk,behavior-hold-tap"; 
+            #binding-cells = <2>; 
+            tapping-term-ms = <350>; 
+            flavor = "tap-preferred"; 
+            quick-tap-ms = <200>; 
+            bindings =<&e_M_eacu> , <&kp>;
+        };
+		eMgrav: eMgrav { 
+            compatible = "zmk,behavior-hold-tap"; 
+            #binding-cells = <2>; 
+            tapping-term-ms = <350>; 
+            flavor = "tap-preferred"; 
+            quick-tap-ms = <200>; 
+            bindings = <&e_M_grav> , <&kp>;
+        };
+		cMcced: cMcced { 
+            compatible = "zmk,behavior-hold-tap"; 
+            #binding-cells = <2>; 
+            tapping-term-ms = <350>; 
+            flavor = "tap-preferred"; 
+            quick-tap-ms = <200>; 
+            bindings = <&c_M_cced> , <&kp>;
+        };
+	};
+
+/*	macros {
+		// Turn off Windows
+		win_off: win_off {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press   &kp LWIN>
+                , <&macro_tap     &kp FR_X>
+                , <&macro_release &kp LWIN>
+                , <&macro_tap     &kp FR_U &kp FR_U>
+                ;
+        };
+		// sometimes my device thinks a modifier is being held down
+		// pressing all modifiers fixes it.
+		unstick: unstick {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
+		};
+*/
+
+
+// Accents macro
+
+
+		
+		a_circ: a_circ {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			wait-ms = <40>;
+			tap-ms = <40>;
+			bindings
+    		= <&macro_tap     &kp FR_CIRC &kp FR_A>
+    		;
+		};
+		e_circ: e_circ {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			wait-ms = <40>;
+			tap-ms = <40>;
+			bindings
+    		= <&macro_tap     &kp FR_CIRC &kp FR_E>
+    		;																	
+		};
+		e_M_circ: e_M_circ {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			wait-ms = <40>;
+			tap-ms = <40>;
+			bindings
+    		= <&macro_tap     &kp FR_CIRC &kp LS(FR_E)>
+    		;																	
+		};
+		e_M_grav: e_M_grav {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			wait-ms = <40>;
+			tap-ms = <40>;
+			bindings
+    		= <&macro_tap     &kp FR_GRV &kp LS(FR_E)>
+    		;
+		};
+		e_trem: e_trem {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			wait-ms = <40>;
+			tap-ms = <40>;
+			bindings
+    		= <&macro_tap     &kp FR_DIAE &kp FR_E>
+    		;
+		};
+		u_circ: u_circ {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			wait-ms = <40>;
+			tap-ms = <40>;
+			bindings
+    		= <&macro_tap     &kp FR_CIRC &kp FR_U>
+    		;
+		};
+		i_circ: i_circ {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			wait-ms = <40>;
+			tap-ms = <40>;
+			bindings
+    		= <&macro_tap     &kp FR_CIRC &kp FR_I>
+    		;
+		};
+		i_M_circ: i_M_circ {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			wait-ms = <40>;
+			tap-ms = <40>;
+			bindings
+    		= <&macro_tap     &kp FR_CIRC &kp LS(FR_I)>
+    		;
+		};
+		i_trem: i_trem {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			wait-ms = <40>;
+			tap-ms = <40>;
+			bindings
+    		= <&macro_tap     &kp FR_DIAE &kp FR_I>
+    		;
+		};
+		o_circ: o_circ {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			wait-ms = <40>;
+			tap-ms = <40>;
+			bindings
+    		= <&macro_tap     &kp FR_CIRC &kp FR_O>
+			;
+		};
+		o_M_circ: o_M_circ {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			wait-ms = <40>;
+			tap-ms = <40>;
+			bindings
+    		= <&macro_tap     &kp FR_CIRC &kp LS(FR_O)>
+    		;
+		};	
+		a_M_grav: a_M_grav {
+			compatible = "zmk,behavior-macro"; 
+			#binding-cells = <0>;
+			wait-ms = <40>;
+			tap-ms = <40>;
+			bindings
+    		= <&macro_tap     &kp FR_GRV &kp LS(FR_A)>
+    		;
+		};
+
+
+
+		// Only Windows, sorry
+
+
+
+		a_e: a_e {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			wait-ms = <40>;
+			tap-ms = <40>;
+			bindings
+    		= <&macro_press   &kp LALT>
+    		, <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N0>
+    		, <&macro_release &kp LALT>
+    		;
+		};
+		o_e: o_e {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			wait-ms = <40>;
+			tap-ms = <40>;
+			bindings
+    		= <&macro_press   &kp LALT>
+    		, <&macro_tap     &kp KP_N0 &kp KP_N1 &kp KP_N5 &kp KP_N6>
+    		, <&macro_release &kp LALT>
+    		;
+		};
+		c_M_cced: c_M_cced {
+			compatible = "zmk,behavior-macro"; 
+			#binding-cells = <0>;
+			wait-ms = <40>;
+			tap-ms = <40>;
+			bindings
+    		= <&macro_press   &kp LALT>
+    		, <&macro_tap     &kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N9>
+    		, <&macro_release &kp LALT>
+    		;
+		};
+		e_M_eacu: e_M_eacu {
+			compatible = "zmk,behavior-macro"; 
+			#binding-cells = <0>;
+			wait-ms = <40>;
+			tap-ms = <40>;
+			bindings
+    		= <&macro_press   &kp LALT>
+    		, <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N1>
+    		, <&macro_release &kp LALT>
+    		;
+		};
+	};
+
+
+combos {
+		compatible = "zmk,combos";
+		// both left thumb keys
+		combo_settings {
+			timeout-ms = <200>;
+			key-positions = <30 31>;
+			bindings = <&mo SETTINGS>;
+		};
+		// left index & middle fingers (home-row)
+		// hold space for Figma...
+		combo_ctrl_space {
+			timeout-ms = <200>;
+			key-positions = <12 13>;
+			bindings = <&kp SPACE>;
+			layers = <BASE>;
+		};
+	};
+
+
+keymap {
+		compatible = "zmk,keymap";
+		// Base alpha layer
+		default_layer {
+			display-name = "Base";
+			bindings = <
+			&kp TAB       &qt LS(FR_Q) FR_Q     &qt LS(FR_C) FR_C     &qt LS(FR_O) FR_O     &qt LS(FR_P) FR_P     &qt LS(FR_W) FR_W             &qt LS(FR_J) FR_J      &qt LS(FR_M) FR_M      &qt LS(FR_D) FR_D     &qt FR_DQUO FR_QUOT     &qt LS(FR_Y) FR_Y     &kp BSPC 
+			&kp LCTRL     &qt LS(FR_A) FR_A     &qt LS(FR_S) FR_S     &qt LS(FR_E) FR_E 	&qt LS(FR_N) FR_N     &qt LS(FR_F) FR_F             &qt LS(FR_L) FR_L      &qt LS(FR_R) FR_R      &qt LS(FR_T) FR_T     &qt LS(FR_I) FR_I   	&qt LS(FR_U) FR_U     &kp SQT
+			&kp LSHFT     &qt LS(FR_Z) FR_Z     &qt LS(FR_X) FR_X     &qt FR_QUES FR_MINS   &qt LS(FR_V) FR_V     &qt LS(FR_B) FR_B             &qt FR_COLN FR_DOT     &qt LS(FR_H) FR_H      &qt LS(FR_G) FR_G  	&qt FR_SCLN FR_COMM    	&qt LS(FR_K) FR_K     &kp ESC
+							           										                 &trans     &td1      &qt LSHIFT SPACE       		&lt SHT ENTER     &td0     &trans
+			>;
+		};
+        // Used for system short cuts
+		sht_layer {
+			display-name = "ShortC";
+			bindings = <
+			&none                   &kp LC(LA(LG(FR_AMPR))) &kp LC(LA(LG(FR_EACU))) &kp LC(LA(LG(FR_DQUO))) &kp LC(LA(LG(FR_QUOT))) &kp LC(LA(LG(FR_LPRN)))     &none 			 &none 			  &none 			&none 				&kp LC(LA(DEL))            &none
+			&none                   &none					&none 					&kp C_MUTE 				&kp C_VOL_DN 			&kp C_VOL_UP    			&kp LC(RA(FR_X)) &kp LC(RA(FR_Y)) &kp LC(RA(FR_D)) 	&none				&kp F24                    &none
+			&none                   &kp PRINTSCREEN 		&none 					&kp C_PREV 				&kp C_PP  				&kp C_NEXT					&kp LC(RA(FR_U)) &kp LC(RA(FR_S)) &kp LC(RA(FR_C)) 	&kp LC(RA(FR_V))	&kp LG(SPACE)              &none
+																											&trans  &trans 				&trans &trans 
+			>;
+		};
+
 
     keymap {
         compatible = "zmk,keymap";
