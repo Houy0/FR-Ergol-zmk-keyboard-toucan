@@ -126,7 +126,7 @@
         };
 	};
 
-/*	macros {
+	macros {
 		// Turn off Windows
 		win_off: win_off {
             compatible = "zmk,behavior-macro";
@@ -147,7 +147,7 @@
 			#binding-cells = <0>;
 			bindings = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
 		};
-*/
+
 
 
 // Accents macro
