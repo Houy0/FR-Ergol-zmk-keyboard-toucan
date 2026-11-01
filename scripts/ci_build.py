@@ -129,8 +129,14 @@ def main() -> int:
         ):
             if run(command, cwd=workspace, env=env, log=provenance / (name + ".log")):
                 raise RuntimeError(name + " failed; build prerequisites were not established")
-        with (provenance / "west-frozen.yml").open("w", encoding="utf-8") as stream:
-            subprocess.run(["west", "manifest", "--freeze"], cwd=workspace, env=env, stdout=stream, check=True)
+        # west update intentionally skips optional/disabled groups. Freeze only
+        # the active downloaded projects; retain all declared projects separately.
+        for filename, arguments in (("west-resolved.yml", ["--resolve"]),
+                                    ("west-frozen.yml", ["--freeze", "--active-only"])):
+            with (provenance / filename).open("w", encoding="utf-8") as stream, \
+                    (provenance / (filename + ".stderr.log")).open("w", encoding="utf-8") as errors:
+                subprocess.run(["west", "manifest", *arguments], cwd=workspace, env=env,
+                               stdout=stream, stderr=errors, check=True)
         (provenance / "west-projects.txt").write_text(
             capture(["west", "list", "--format", "{name}\t{revision}\t{path}"], workspace, env) + "\n", encoding="utf-8")
         revisions = []
