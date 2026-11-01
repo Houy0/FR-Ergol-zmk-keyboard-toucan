@@ -160,14 +160,15 @@ class DeviceTree:
             raise ValueError("Cannot identify generated DTS node " + label)
         return selected[0]
 
-    def bindings(self, node: Node, key: str = "bindings") -> list[tuple[Node, list[int | str]]]:
+    def bindings(self, node: Node, key: str = "bindings", *,
+                 cell_property: str = "#binding-cells") -> list[tuple[Node, list[int | str]]]:
         values = cells(node.props.get(key, []))
         result, index = [], 0
         while index < len(values):
             behavior = self.resolve(values[index])
-            count = behavior.integer("#binding-cells")
+            count = behavior.integer(cell_property)
             if count is None or count < 0 or index + count >= len(values):
-                raise ValueError("Missing binding arity or incomplete binding in " + node.name)
+                raise ValueError("Missing " + cell_property + " arity or incomplete reference array in " + node.name)
             result.append((behavior, values[index + 1:index + count + 1]))
             index += count + 1
         return result
@@ -271,7 +272,9 @@ class Verification:
         layout = tree.one_ref(chosen, "zmk,physical-layout")
         self.check("physical_layout_selected", "zmk,physical-layout" in layout.strings("compatible"),
                    "Chosen physical layout resolves")
-        physical = tree.bindings(layout, "keys")
+        # Physical attributes use #key-cells; behavior bindings use
+        # #binding-cells. They are distinct DTS specifier spaces in ZMK.
+        physical = tree.bindings(layout, "keys", cell_property="#key-cells")
         self.check("42_physical_positions", len(physical) == 42 and all(
             "zmk,key-physical-attrs" in node.strings("compatible") and len(arguments) == 7
             for node, arguments in physical), "42 physical attributes, each with seven coordinate/geometry arguments")

@@ -27,9 +27,9 @@ python scripts/verify_port.py --root . --report provenance/port-verification.jso
 
 Ce contrôle vérifie les invariants des sources et les contraintes du portage. Il ne compile pas le firmware, ne remplace pas le préprocesseur ou les schémas ZMK et ne télécharge aucune dépendance. Le plan d’[essais après flash](docs/test-plan.md) distingue les gestes à vérifier réellement des contrôles de fichiers.
 
-## Limite actuelle et suite
+## Compilation et essais
 
-L’étape 5 prépare les compilations GitHub Actions sur `selenium-hrm`. L’image ARM pour Zephyr 3.5, son SDK et les actions sont fixés par empreinte. Deux constructions indépendantes sans cache doivent produire les trois mêmes UF2 avant leur livraison. Les configurations et devicetrees générés seront contrôlés et archivés avec les journaux. Une compilation réussie ne valide pas les gestes sur le clavier : les essais physiques restent nécessaires.
+Les [compilations GitHub Actions](https://github.com/Houy0/FR-Ergol-zmk-keyboard-toucan/actions?query=branch%3Aselenium-hrm) ciblent `selenium-hrm`. L’image ARM pour Zephyr 3.5, son SDK et les actions sont fixés par empreinte. Deux constructions indépendantes sans cache doivent produire les trois mêmes UF2 avant leur livraison. Les configurations et devicetrees générés sont contrôlés et archivés avec les journaux. Le lot final porte le nom **`toucan-v1-selenium-firmware`** ; [le guide de compilation](docs/build.md) décrit les artefacts et leur provenance. Une compilation réussie ne valide pas les gestes sur le clavier : les essais physiques restent nécessaires.
 
 Le socle officiel figé à l’étape 1 reste identifiable dans les archives et la provenance. Son ancien vérificateur `scripts/verify_baseline.py` reste destiné à cette version témoin ; il n’est pas le vérificateur de la configuration Selenium courante.
 

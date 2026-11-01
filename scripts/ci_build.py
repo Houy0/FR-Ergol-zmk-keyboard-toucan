@@ -160,7 +160,7 @@ def main() -> int:
             save_json(diagnostic / "build-command.json", command)
             build_code = run(command, cwd=workspace, env=env, log=diagnostic / "build.log")
             summary["compilation_performed"] = True
-            for relative in ("zephyr/.config", "zephyr/zephyr.dts", "zephyr/zephyr.dts.pre", "zephyr/zmk.map", "zephyr/zmk.elf", "CMakeCache.txt"):
+            for relative in ("zephyr/.config", "zephyr/zephyr.dts", "zephyr/zephyr.dts.pre", "zephyr/zmk.map", "zephyr/zmk.elf", "zephyr/zmk.uf2", "CMakeCache.txt"):
                 source = directory / relative
                 if source.is_file():
                     destination = diagnostic / relative

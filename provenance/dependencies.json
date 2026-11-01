@@ -91,9 +91,9 @@
     "frozen_resolved_manifest": "Generate and archive west manifest --freeze after workspace download at build time"
   },
   "build_environment": {
-    "status": "pinned-awaiting-first-build",
+    "status": "pinned-ci-environment",
     "record": "provenance/build-environment.json",
     "local_compilation_performed": false,
-    "binary_reproducibility_demonstrated": false
+    "binary_reproducibility": "Evaluated per source commit by ci_compare.py; results archived in GitHub Actions artifacts"
   }
 }
