@@ -81,8 +81,11 @@ def main() -> int:
     try:
         declaration = json.loads((project / "provenance/build-environment.json").read_text(encoding="utf-8"))
         summary["container_image"] = declaration["image"]
-        summary["source_commit"] = capture(["git", "rev-parse", "HEAD"], project, env)
-        epoch = capture(["git", "show", "-s", "--format=%ct", "HEAD"], project, env)
+        # GitHub mounts the checkout with a host UID different from container
+        # root. Trust this exact source path for these read-only Git commands.
+        source_git = ["git", "-c", "safe.directory=" + str(project)]
+        summary["source_commit"] = capture(source_git + ["rev-parse", "HEAD"], project, env)
+        epoch = capture(source_git + ["show", "-s", "--format=%ct", "HEAD"], project, env)
         if not epoch.isdecimal():
             raise RuntimeError("Git source timestamp is not a decimal SOURCE_DATE_EPOCH")
         env["SOURCE_DATE_EPOCH"] = epoch
