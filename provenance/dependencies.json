@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "recorded_on": "2026-11-01",
+  "projects": [
+    {
+      "name": "zmk",
+      "url": "https://github.com/zmkfirmware/zmk",
+      "revision": "edf5c0814fd3ea202e43aad2d68fd32e882a518c",
+      "path": "zmk",
+      "upstream_ref": "refs/tags/v0.3",
+      "evidence_url": "https://github.com/zmkfirmware/zmk/tree/v0.3",
+      "commit_url": "https://github.com/zmkfirmware/zmk/commit/edf5c0814fd3ea202e43aad2d68fd32e882a518c",
+      "resolution": "Tag selected and full latest-commit link read in GitHub browser UI"
+    },
+    {
+      "name": "zephyr",
+      "url": "https://github.com/zmkfirmware/zephyr",
+      "revision": "dacab4875df72109b96cc8977547a0dc04875bcd",
+      "path": "zephyr",
+      "upstream_ref": "refs/heads/v3.5.0+zmk-fixes",
+      "evidence_url": "https://github.com/zmkfirmware/zephyr/tree/v3.5.0%2Bzmk-fixes",
+      "commit_url": "https://github.com/zmkfirmware/zephyr/commit/dacab4875df72109b96cc8977547a0dc04875bcd",
+      "resolution": "Branch selected and full commit-link href read in GitHub browser UI"
+    },
+    {
+      "name": "nanopb",
+      "url": "https://github.com/zmkfirmware/nanopb",
+      "revision": "8c60555d6277a0360c876bd85d491fc4fb0cd74a",
+      "path": "modules/lib/nanopb",
+      "upstream_ref": "app/west.yml at the pinned ZMK revision",
+      "evidence_url": "https://github.com/zmkfirmware/zmk/blob/edf5c0814fd3ea202e43aad2d68fd32e882a518c/app/west.yml",
+      "commit_url": "https://github.com/zmkfirmware/nanopb/commit/8c60555d6277a0360c876bd85d491fc4fb0cd74a",
+      "resolution": "Existing immutable revision from the pinned ZMK manifest"
+    },
+    {
+      "name": "zmk-studio-messages",
+      "url": "https://github.com/zmkfirmware/zmk-studio-messages",
+      "revision": "6cb4c283e76209d59c45fbcb218800cd19e9339d",
+      "path": "modules/msgs/zmk-studio-messages",
+      "upstream_ref": "app/west.yml at the pinned ZMK revision",
+      "evidence_url": "https://github.com/zmkfirmware/zmk/blob/edf5c0814fd3ea202e43aad2d68fd32e882a518c/app/west.yml",
+      "commit_url": "https://github.com/zmkfirmware/zmk-studio-messages/commit/6cb4c283e76209d59c45fbcb218800cd19e9339d",
+      "resolution": "Existing immutable revision from the pinned ZMK manifest"
+    },
+    {
+      "name": "cirque-input-module",
+      "url": "https://github.com/geeksville/cirque-input-module",
+      "revision": "effec100f0cd3a38e7fba3adfea394586cc84cab",
+      "path": "cirque-input-module",
+      "upstream_ref": "refs/heads/toucan",
+      "evidence_url": "https://github.com/geeksville/cirque-input-module/tree/toucan",
+      "commit_url": "https://github.com/geeksville/cirque-input-module/commit/effec100f0cd3a38e7fba3adfea394586cc84cab",
+      "resolution": "Branch selected and full latest-commit link read in GitHub browser UI"
+    },
+    {
+      "name": "zmk-rgbled-widget",
+      "url": "https://github.com/caksoylar/zmk-rgbled-widget",
+      "revision": "8756cb7b8114069fa3c25c6f6c990f24988fceff",
+      "path": "zmk-rgbled-widget",
+      "upstream_ref": "refs/tags/v0.3",
+      "evidence_url": "https://github.com/caksoylar/zmk-rgbled-widget/tree/v0.3",
+      "commit_url": "https://github.com/caksoylar/zmk-rgbled-widget/commit/8756cb7b8114069fa3c25c6f6c990f24988fceff",
+      "resolution": "Tag selected and full latest-commit link read in GitHub browser UI"
+    }
+  ],
+  "west_policy": {
+    "zmk_import": "app/west.yml",
+    "zephyr_name_blocklist": [
+      "ci-tools", "hal_altera", "hal_cypress", "hal_infineon",
+      "hal_microchip", "hal_nxp", "hal_openisa", "hal_silabs",
+      "hal_xtensa", "hal_st", "hal_ti", "loramac-node", "mcuboot",
+      "mcumgr", "net-tools", "openthread", "edtt", "trusted-firmware-m"
+    ],
+    "nanopb_precedence": "Explicit top-level ZMK fork and path override Zephyr optional nanopb",
+    "sha_revisions_have_no_clone_depth": true,
+    "source_manifests_audit": "Pinned Zephyr main and imported optional manifest use full commit revisions",
+    "frozen_resolved_manifest": "Generate and archive west manifest --freeze after workspace download at build time"
+  },
+  "build_environment": {
+    "status": "deferred-to-step-5",
+    "reason": "GitHub Actions, build image, SDK and tools will be pinned and recorded before the first build",
+    "local_compilation_performed": false,
+    "binary_reproducibility_demonstrated": false
+  }
+}

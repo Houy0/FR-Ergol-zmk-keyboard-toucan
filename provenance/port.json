@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "prepared_on": "2026-11-01",
+  "stage": "step-3-source-port",
+  "hardware": "Beekeeb Toucan v1 / original, unmodified",
+  "host": "Windows, native Ergo-L standard selected; user input validation passed at step 2.",
+  "reference": {
+    "repository": "https://github.com/OneDeadKey/zmk-config-aekeynox",
+    "commit": "3cadeede766f31bc1e34d7c9d8ee918073cf8478",
+    "source_files": [
+      {
+        "path": "LICENSE",
+        "sha256": "1c73fb6f01c13dda11be4516a593fd3208928f6d328985cd9961ea94486a6729"
+      },
+      {
+        "path": "include/aekeynox/selenium.keymap",
+        "sha256": "111cc663f1046e9d3d662cd1556ef5ce4fb505346dc0e2d9de94544f719ac031"
+      },
+      {
+        "path": "include/aekeynox/hold_taps.dtsi",
+        "sha256": "d48704e3a464698731d6d64336a8210d29f6bbd285b09dfcdb4af010c677056c"
+      },
+      {
+        "path": "include/aekeynox/mappings.dtsi",
+        "sha256": "761cc653edf4255f064ccfd8d136fd9acdcd2145a64fe7c7a9eee9a2b57ba4e6"
+      },
+      {
+        "path": "include/aekeynox/defaults.h",
+        "sha256": "a4324543ac1d469ea5f6a34affb99f39dc8ec2e3bb5005ab1afbee86767980ed"
+      },
+      {
+        "path": "include/aekeynox/aliases.h",
+        "sha256": "b44a416aaf2d6d76907fbf0092de263aa62858b00d1d68230ca17a960cfdb0e2"
+      },
+      {
+        "path": "include/aekeynox/aliases/ergol.h",
+        "sha256": "49038e6fd44535e479f657ddcd09672c8957a892c1d2b9bc3d508f8da185f47f"
+      }
+    ]
+  },
+  "upstream_overrides": [
+    {
+      "local_path": "config/toucan.keymap",
+      "original_archive": "reference/baseline/config-toucan.keymap",
+      "upstream_sha256": "c6c0ba57b75c20ac4f61ac87f0cb189332beba41c94c62f8395f6c1cafaf9796",
+      "current_sha256": "76ad35a3395328aad25dc8bd39b87f226c0122e87f7db350d2c3e0cfb01d5a79",
+      "reason": "Selenium HRM Vim: five layers and six inert outer keys."
+    },
+    {
+      "local_path": "boards/shields/toucan/toucan.keymap",
+      "original_archive": "reference/baseline/shield-toucan.keymap",
+      "upstream_sha256": "c6c0ba57b75c20ac4f61ac87f0cb189332beba41c94c62f8395f6c1cafaf9796",
+      "current_sha256": "9c19228dd9866c88726df7934663bccfaae216b88e95cf3896c5b1d0e3015f5a",
+      "reason": "Include the single user keymap instead of a separate 42-active-key fallback."
+    },
+    {
+      "local_path": "boards/shields/toucan/toucan.dtsi",
+      "original_archive": "reference/baseline/toucan.dtsi",
+      "upstream_sha256": "48aff97276fdf69280d02d8dec14dc388209707b029b3b8dd4edba4be42483f3",
+      "current_sha256": "7a493bd5f05d0e27b241fae3f95ebbec54c36051fac5497616d763ada37075ba",
+      "reason": "Include layer constants; use VIM_NAV for scroll. All other hardware properties unchanged."
+    }
+  ],
+  "baseline_build_matrix_archive": "reference/upstream-build.yaml",
+  "source_checkpoint": [
+    {
+      "path": "config/toucan.keymap",
+      "sha256": "76ad35a3395328aad25dc8bd39b87f226c0122e87f7db350d2c3e0cfb01d5a79"
+    },
+    {
+      "path": "config/layers.h",
+      "sha256": "b5d0ac1c068a57909af65f9d5f04b71a08ccab958b0542a5aa9f072340488022"
+    },
+    {
+      "path": "config/timing.h",
+      "sha256": "64264d67d6b1d043e100f1a987a525b9d20044ccfcdaf06a2ea17d9085edb1ad"
+    },
+    {
+      "path": "config/selenium-behaviors.dtsi",
+      "sha256": "f1fff09d93409b4f703c1cdcf35577e770ce3e0ba94ea4fbd4153c536b2aec39"
+    },
+    {
+      "path": "config/ergol.h",
+      "sha256": "5479cf67a14e8daf0fd8937418e46254f0bb96464176b32fa6a984701f12682c"
+    },
+    {
+      "path": "build.yaml",
+      "sha256": "8759d93055ea35e54b197ec00bfdaf14480040046003d4b9f3be0f56458f1e90"
+    },
+    {
+      "path": "boards/shields/toucan/toucan.keymap",
+      "sha256": "9c19228dd9866c88726df7934663bccfaae216b88e95cf3896c5b1d0e3015f5a"
+    },
+    {
+      "path": "boards/shields/toucan/toucan.dtsi",
+      "sha256": "7a493bd5f05d0e27b241fae3f95ebbec54c36051fac5497616d763ada37075ba"
+    }
+  ],
+  "constraints": {
+    "layers": [
+      "Base",
+      "Symbols",
+      "VimNav",
+      "NumRow",
+      "FnMedia"
+    ],
+    "matrix_positions": 42,
+    "reserved_positions": [
+      0,
+      11,
+      12,
+      23,
+      24,
+      35
+    ],
+    "shift_home_row_mods": false,
+    "studio": false,
+    "pointer_scroll_layers": [
+      "VIM_NAV"
+    ],
+    "timings_ms": {
+      "TAP_PREFERRED_MS": 300,
+      "HOLD_PREFERRED_MS": 150,
+      "QUICK_TAP_MS": 200,
+      "STICKY_TIMEOUT_MS": 1000
+    }
+  },
+  "adaptations": [
+    "Shift sticky/hold on thumb, including VimNav; no CapsWord or thumb CapsLock action.",
+    "FnMedia PrintScreen is plain, without the unconditional Shift HRM from the reference.",
+    "All five Bluetooth profiles remain accessible; Shift+profile-1 key clears the selected profile.",
+    "FnMedia USB/BLE toggle replaces Studio unlock.",
+    "Touchpad scroll follows VimNav only, including when a higher layer is also active.",
+    "No optional layouts, controllers, emulation or community behavior modules."
+  ],
+  "validation": {
+    "report": "provenance/port-verification.json",
+    "scope": "static source checks and independent reference review",
+    "compilation_checked": false,
+    "physical_tests_performed": false
+  },
+  "remote_writes": false
+}

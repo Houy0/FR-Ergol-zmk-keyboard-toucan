@@ -1,0 +1,16 @@
+* text=auto eol=lf
+*.conf text eol=lf
+*.dtsi text eol=lf
+*.h text eol=lf
+*.keymap text eol=lf
+*.md text eol=lf
+*.overlay text eol=lf
+*.py text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+Kconfig* text eol=lf
+# Preserve the four upstream Git blobs that intentionally contain CRLF.
+QuinqueFive_License.txt -text
+boards/shields/nice_view_gem/Kconfig.defconfig -text
+boards/shields/nice_view_gem/Kconfig.shield -text
+boards/shields/nice_view_gem/nice_view_gem.overlay -text

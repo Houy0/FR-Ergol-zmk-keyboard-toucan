@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "audited_on": "2026-11-01",
+  "reading_copies": [
+    {
+      "path": "reference/manifests/zmk-west.yml",
+      "source_url": "https://github.com/zmkfirmware/zmk/blob/edf5c0814fd3ea202e43aad2d68fd32e882a518c/app/west.yml",
+      "method": "Reading copy from the pinned raw manifest; formatting may differ from original Git bytes.",
+      "sha256_of_reading_copy": "2607385400e5b76714440926eb96976bd9b414257dc1d0e0941ee7d8238757bb",
+      "project_revision_count": 3,
+      "all_project_revisions_are_full_sha": false
+    },
+    {
+      "path": "reference/manifests/zephyr-west.yml",
+      "source_url": "https://github.com/zmkfirmware/zephyr/blob/dacab4875df72109b96cc8977547a0dc04875bcd/west.yml",
+      "method": "Reading copy from the pinned raw manifest; formatting may differ from original Git bytes.",
+      "sha256_of_reading_copy": "ec0a2ed86dc8e005fbabee4f5bf01e44505c23fb6ed2cc24100cc54d2178681a",
+      "project_revision_count": 62,
+      "all_project_revisions_are_full_sha": true
+    },
+    {
+      "path": "reference/manifests/zephyr-optional.yml",
+      "source_url": "https://github.com/zmkfirmware/zephyr/blob/dacab4875df72109b96cc8977547a0dc04875bcd/submanifests/optional.yaml",
+      "method": "Raw branch reading copy compared with the pinned blob ignoring whitespace; not claimed byte-identical to that Git blob.",
+      "sha256_of_reading_copy": "55c4a9c7fc0c743e56c1000fd4315ce046f2cd8c3ad24e7cba46afe03f584df6",
+      "project_revision_count": 9,
+      "all_project_revisions_are_full_sha": true
+    }
+  ],
+  "zephyr_imported_directory": {
+    "source_url": "https://github.com/zmkfirmware/zephyr/tree/dacab4875df72109b96cc8977547a0dc04875bcd/submanifests",
+    "observed_files": [
+      "README.txt",
+      "example.yaml.sample",
+      "optional.yaml"
+    ],
+    "active_yaml_manifests": [
+      "optional.yaml"
+    ]
+  },
+  "notes": [
+    "The ZMK reading manifest still contains the upstream Zephyr branch and clone-depth; the top-level pinned manifest overrides it explicitly.",
+    "Zephyr main has 62 full-SHA project revisions; optional has 9, before filters and overrides.",
+    "These records are static source inspection, not an executed west resolution or a firmware build."
+  ]
+}

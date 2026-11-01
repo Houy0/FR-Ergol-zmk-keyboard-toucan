@@ -1,0 +1,40 @@
+{
+  "scope": "negative source checker probes; no compilation",
+  "source_project_modified": false,
+  "results": [
+    {
+      "case": "unaltered_project",
+      "exit": 0,
+      "checks": 172
+    },
+    {
+      "case": "input_stack_regression_512",
+      "exit": 1,
+      "status": "fail",
+      "failed_checks": [
+        "normalised_bytes:config/toucan_left.conf",
+        "side_config_matches:left",
+        "side_config:left:CONFIG_INPUT_THREAD_STACK_SIZE"
+      ],
+      "pending": []
+    },
+    {
+      "case": "floating_zmk_branch",
+      "exit": 1,
+      "status": "fail",
+      "failed_checks": [
+        "dependency_pin:zmk"
+      ],
+      "pending": []
+    },
+    {
+      "case": "missing_dependency_lock",
+      "exit": 2,
+      "status": "incomplete",
+      "failed_checks": [],
+      "pending": [
+        "Dependency lock not assessed; missing provenance/dependencies.json"
+      ]
+    }
+  ]
+}

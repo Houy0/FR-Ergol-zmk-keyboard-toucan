@@ -1,0 +1,13 @@
+.west/
+build/
+build-*/
+firmware/
+.venv/
+__pycache__/
+*.py[cod]
+*.uf2
+*.hex
+*.elf
+*.bin
+*.zip
+!reference/*.zip

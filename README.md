@@ -1,13 +1,48 @@
-# ZMK config for beekeeb Toucan Keyboard
+# Toucan v1 — Selenium HRM Vim et Ergo-L
 
-[The beekeeb Toucan Keyboard](https://beekeeb.com/toucan-keyboard/) is a wireless split 42-key column‑stagger keyboard that a display and a trackpad, with an aggressive stagger on the pinky columns.
+Ce projet porte **Selenium HRM, variante Vim**, sur le **Beekeeb Toucan v1 d’origine**. Il est destiné à la branche [`selenium-hrm`](https://github.com/Houy0/FR-Ergol-zmk-keyboard-toucan/tree/selenium-hrm) du fork existant [`Houy0/FR-Ergol-zmk-keyboard-toucan`](https://github.com/Houy0/FR-Ergol-zmk-keyboard-toucan). Il nécessite la disposition **Ergo-L standard installée et sélectionnée sur l’ordinateur**. L’installation Windows de référence a été validée à l’étape 2, puis son doublon KbdEdit retiré et le test refait avec succès.
 
-# License
+## Configuration développée
 
-The code in this repo is available under the MIT license.
+- **Cinq couches** : Base, Symbols, VimNav, NumRow et FnMedia.
+- **36 touches utilisables** : 30 principales et 6 pouces. Les six touches des colonnes extérieures restent sans action sur chaque couche ; la matrice matérielle conserve ses 42 positions.
+- **Shift au pouce uniquement** ; HRM Alt/Ctrl/GUI sur la rangée de repos, sans Shift HRM. Aucun CapsWord ni action spéciale au double Shift.
+- **Seuils distincts dans [config/timing.h](config/timing.h)** : tap-preferred 300 ms, hold-preferred 150 ms, répétition quick-tap 200 ms. Expiration sticky séparée : 1000 ms. Toute modification demande une nouvelle compilation et un flash.
+- Support Beekeeb conservé : centrale gauche et écran, Cirque à droite, GPIO, géométrie, énergie et pile d’entrée à 2048. Le défilement garde ses réglages officiels et s’active lorsque **VimNav** est active, y compris sous une couche supérieure.
+- Bluetooth : accès aux cinq profils, effacement du profil sélectionné avec Shift, choix USB/Bluetooth et accès maintenance depuis les 36 touches.
 
-The included shield nice_view_gem is modified from https://github.com/M165437/nice-view-gem licensed under the MIT License.
+La V1 fonctionne initialement **sans ZMK Studio** : la matrice de build le désactive explicitement sur les deux moitiés. Les fichiers compilés constituent la source de configuration. Le keymap du shield inclut celui de `config/`, ce qui évite un retour accidentel à l’ancienne disposition à 42 touches actives.
 
-ZMK code snippets are taken from the ZMK documentation under the MIT license.
+Les caractères et les raccourcis utilisent les codes destinés au pilote Ergo-L natif. La touche Typo ★ reste à sa position HID O. Il n’y a ni couche Typo dans le firmware, ni table Unicode ou émulation AZERTY/QWERTY. V2 pavé tactile et V3 émulations restent hors du développement actuel.
 
-The embedded font QuinqueFive is designed by GGBotNet, licensed under under the SIL Open Font License, Version 1.1.
+Les fonctions et accès sont décrits dans [le guide des cinq couches](docs/keymap.md). La variante Vim prépare l’organisation future du pavé ; elle n’impose pas d’utiliser l’éditeur Vim.
+
+## Vérification locale
+
+Avec Python 3.10 ou ultérieur (contrôlé ici avec Python 3.12.14) :
+
+```text
+python scripts/verify_port.py --root . --report provenance/port-verification.json
+```
+
+Ce contrôle vérifie les invariants des sources et les contraintes du portage. Il ne compile pas le firmware, ne remplace pas le préprocesseur ou les schémas ZMK et ne télécharge aucune dépendance. Le plan d’[essais après flash](docs/test-plan.md) distingue les gestes à vérifier réellement des contrôles de fichiers.
+
+## Limite actuelle et suite
+
+Aucun fichier UF2 n’est livré à cette étape. La publication de la branche `selenium-hrm` dans le fork existant est autorisée ; les compilations GitHub Actions restent prévues à l’étape 5. L’image de construction, les versions des outils et les actions seront figées avant cette première compilation ; une identité binaire reproductible n’est pas encore démontrée.
+
+Le socle officiel figé à l’étape 1 reste identifiable dans les archives et la provenance. Son ancien vérificateur `scripts/verify_baseline.py` reste destiné à cette version témoin ; il n’est pas le vérificateur de la configuration Selenium courante.
+
+## Repères
+
+- [Socle matériel et écarts déclarés](docs/baseline.md)
+- [Environnement et voie de compilation](docs/environment.md)
+- [Versions et imports](docs/dependencies.md)
+- [Bilan de l’étape 1](docs/step-1.md)
+- [Bilan du développement — étape 3](docs/step-3.md)
+- [Dépôt, branches et suivi Beekeeb](docs/github.md)
+- [Écarts et provenance du portage](provenance/port.json)
+- [Provenance du support Beekeeb](provenance/upstream.json)
+- [Versions fixées](provenance/dependencies.json)
+
+Les fichiers d’origine remplacés sont conservés sous `reference/baseline/`. [Les notices tierces](THIRD_PARTY_NOTICES.md) accompagnent les adaptations. La nouvelle branche repart du commit officiel audité ; elle ne reprend pas les modifications de l’ancien essai conservé dans `main`. Aucun workflow actif n’est inclus à cette étape. Les manipulations techniques et corrections sont assurées par l’assistant ; l’utilisateur conserve les arbitrages et les essais physiques.

@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "purpose": "source-checker-negative-probes",
+  "active_project_mutated": false,
+  "compiler_or_hardware_checked": false,
+  "baseline": {
+    "exit_code": 0,
+    "status": "pass",
+    "summary": {
+      "checks": 350,
+      "passed": 350,
+      "failed": 0,
+      "warnings": 1,
+      "pending": 0
+    }
+  },
+  "cases": [
+    {
+      "case": "outer_column_activated",
+      "passed": true,
+      "exit_code": 1,
+      "expected_failure": "outer_columns_none:base",
+      "actual_failures": [
+        "outer_columns_none:base"
+      ]
+    },
+    {
+      "case": "hold_timing_coupled_to_tap",
+      "passed": true,
+      "exit_code": 1,
+      "expected_failure": "timing_source:sc",
+      "actual_failures": [
+        "timing_source:sc"
+      ]
+    },
+    {
+      "case": "scroll_on_symbols",
+      "passed": true,
+      "exit_code": 1,
+      "expected_failure": "scroll_vimnav_only",
+      "actual_failures": [
+        "scroll_vimnav_only",
+        "hardware_only_scroll_change"
+      ]
+    },
+    {
+      "case": "unresolved_alias",
+      "passed": true,
+      "exit_code": 1,
+      "expected_failure": "keymap",
+      "actual_failures": [
+        "keymap"
+      ]
+    },
+    {
+      "case": "missing_release_parameter_transfer",
+      "passed": true,
+      "exit_code": 1,
+      "expected_failure": "macro_protocol:lkp",
+      "actual_failures": [
+        "macro_protocol:lkp"
+      ]
+    }
+  ],
+  "status": "pass",
+  "notes": [
+    "Faults were introduced only into isolated work copies; the active project was unchanged.",
+    "These probes validate error detection by the source checker, not firmware event scheduling."
+  ]
+}

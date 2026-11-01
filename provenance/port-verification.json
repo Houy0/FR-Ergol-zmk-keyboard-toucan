@@ -1,0 +1,1806 @@
+{
+  "schema_version": 1,
+  "scope": "toucan-selenium-stage-3-controlled-static-source-checks",
+  "project_root": "toucan-v1-selenium-hrm",
+  "status": "pass",
+  "compilation_checked": false,
+  "physical_tests_performed": false,
+  "limits": [
+    "No compiler, generated .config or generated devicetree was checked.",
+    "Hashes and pins are compared with local provenance; no remote repository was fetched.",
+    "The six direct pins and Zephyr policy are not a resolved transitive workspace or a pinned build environment.",
+    "The DTS linter only accepts the controlled local syntax and object aliases; it is not a C preprocessor or devicetree compiler.",
+    "Keycodes are symbolic names from an audited v0.3 subset; HID values, modifiers and generated overlays are not compiled/evaluated.",
+    "Checked timings are source defaults; external C defines and runtime/sticky/hold-tap event scheduling were not simulated.",
+    "No physical keypress, host character, Bluetooth, display or touchpad test was performed."
+  ],
+  "summary": {
+    "checks": 350,
+    "passed": 350,
+    "failed": 0,
+    "warnings": 1,
+    "pending": 0
+  },
+  "observed": {
+    "historical_upstream_records": 47,
+    "archived_originals": {
+      "config/toucan.keymap": "reference/baseline/config-toucan.keymap",
+      "boards/shields/toucan/toucan.keymap": "reference/baseline/shield-toucan.keymap",
+      "boards/shields/toucan/toucan.dtsi": "reference/baseline/toucan.dtsi"
+    },
+    "dependency_lock": "six-direct-pins-checked-locally",
+    "build_environment_status": "deferred-to-step-5",
+    "object_aliases": 51,
+    "layer_binding_counts": {
+      "base": 42,
+      "symbols": 42,
+      "vim_nav": 42,
+      "num_row": 42,
+      "fn_media": 42
+    },
+    "timing_defaults_ms": {
+      "TAP_PREFERRED_MS": 300,
+      "HOLD_PREFERRED_MS": 150,
+      "QUICK_TAP_MS": 200,
+      "STICKY_TIMEOUT_MS": 1000
+    },
+    "trackpad_scroll_layer": "VIM_NAV (2)",
+    "build_target_count": 3
+  },
+  "checks": [
+    {
+      "id": "project_directory",
+      "passed": true,
+      "detail": "Project root exists"
+    },
+    {
+      "id": "upstream_identity",
+      "passed": true,
+      "detail": "Historical baseline record remains unchanged in scope"
+    },
+    {
+      "id": "upstream_file_count",
+      "passed": true,
+      "detail": "44 live source records and three archived originals"
+    },
+    {
+      "id": "provenance_unique:reference/upstream-build-workflow.yml",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:reference/upstream-build-workflow.yml",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at reference/upstream-build-workflow.yml"
+    },
+    {
+      "id": "provenance_unique:LICENSE",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:LICENSE",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at LICENSE"
+    },
+    {
+      "id": "provenance_unique:QuinqueFive_License.txt",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:QuinqueFive_License.txt",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at QuinqueFive_License.txt"
+    },
+    {
+      "id": "provenance_unique:reference/upstream-README.md",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:reference/upstream-README.md",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at reference/upstream-README.md"
+    },
+    {
+      "id": "provenance_unique:boards/shields/.gitkeep",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/.gitkeep",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/.gitkeep"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/CMakeLists.txt",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/CMakeLists.txt",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/nice_view_gem/CMakeLists.txt"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/Kconfig.defconfig",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/Kconfig.defconfig",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/nice_view_gem/Kconfig.defconfig"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/Kconfig.shield",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/Kconfig.shield",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/nice_view_gem/Kconfig.shield"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/README.md",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/README.md",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/nice_view_gem/README.md"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/assets/custom_fonts.h",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/assets/custom_fonts.h",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/nice_view_gem/assets/custom_fonts.h"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/assets/images.c",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/assets/images.c",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/nice_view_gem/assets/images.c"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/assets/quinquefive_24.c",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/assets/quinquefive_24.c",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/nice_view_gem/assets/quinquefive_24.c"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/assets/quinquefive_8.c",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/assets/quinquefive_8.c",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/nice_view_gem/assets/quinquefive_8.c"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/custom_status_screen.c",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/custom_status_screen.c",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/nice_view_gem/custom_status_screen.c"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/nice_view_gem.conf",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/nice_view_gem.conf",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/nice_view_gem/nice_view_gem.conf"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/nice_view_gem.overlay",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/nice_view_gem.overlay",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/nice_view_gem/nice_view_gem.overlay"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/nice_view_gem.zmk.yml",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/nice_view_gem.zmk.yml",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/nice_view_gem/nice_view_gem.zmk.yml"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/widgets/battery.c",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/widgets/battery.c",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/nice_view_gem/widgets/battery.c"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/widgets/battery.h",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/widgets/battery.h",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/nice_view_gem/widgets/battery.h"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/widgets/battery_peripheral.c",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/widgets/battery_peripheral.c",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/nice_view_gem/widgets/battery_peripheral.c"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/widgets/battery_peripheral.h",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/widgets/battery_peripheral.h",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/nice_view_gem/widgets/battery_peripheral.h"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/widgets/layer.c",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/widgets/layer.c",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/nice_view_gem/widgets/layer.c"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/widgets/layer.h",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/widgets/layer.h",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/nice_view_gem/widgets/layer.h"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/widgets/output.c",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/widgets/output.c",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/nice_view_gem/widgets/output.c"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/widgets/output.h",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/widgets/output.h",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/nice_view_gem/widgets/output.h"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/widgets/profile.c",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/widgets/profile.c",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/nice_view_gem/widgets/profile.c"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/widgets/profile.h",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/widgets/profile.h",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/nice_view_gem/widgets/profile.h"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/widgets/screen.c",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/widgets/screen.c",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/nice_view_gem/widgets/screen.c"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/widgets/screen.h",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/widgets/screen.h",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/nice_view_gem/widgets/screen.h"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/widgets/sleep.c",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/widgets/sleep.c",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/nice_view_gem/widgets/sleep.c"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/widgets/sleep.h",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/widgets/sleep.h",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/nice_view_gem/widgets/sleep.h"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/widgets/util.c",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/widgets/util.c",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/nice_view_gem/widgets/util.c"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/widgets/util.h",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/widgets/util.h",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/nice_view_gem/widgets/util.h"
+    },
+    {
+      "id": "provenance_unique:boards/shields/toucan/Kconfig.defconfig",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/toucan/Kconfig.defconfig",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/toucan/Kconfig.defconfig"
+    },
+    {
+      "id": "provenance_unique:boards/shields/toucan/Kconfig.shield",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/toucan/Kconfig.shield",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/toucan/Kconfig.shield"
+    },
+    {
+      "id": "provenance_unique:boards/shields/toucan/toucan.dtsi",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/toucan/toucan.dtsi",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at reference/baseline/toucan.dtsi"
+    },
+    {
+      "id": "provenance_unique:boards/shields/toucan/toucan.keymap",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/toucan/toucan.keymap",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at reference/baseline/shield-toucan.keymap"
+    },
+    {
+      "id": "provenance_unique:boards/shields/toucan/toucan.zmk.yml",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/toucan/toucan.zmk.yml",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/toucan/toucan.zmk.yml"
+    },
+    {
+      "id": "provenance_unique:boards/shields/toucan/toucan_left.conf",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/toucan/toucan_left.conf",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/toucan/toucan_left.conf"
+    },
+    {
+      "id": "provenance_unique:boards/shields/toucan/toucan_left.overlay",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/toucan/toucan_left.overlay",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/toucan/toucan_left.overlay"
+    },
+    {
+      "id": "provenance_unique:boards/shields/toucan/toucan_right.conf",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/toucan/toucan_right.conf",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/toucan/toucan_right.conf"
+    },
+    {
+      "id": "provenance_unique:boards/shields/toucan/toucan_right.overlay",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/toucan/toucan_right.overlay",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at boards/shields/toucan/toucan_right.overlay"
+    },
+    {
+      "id": "provenance_unique:reference/upstream-build.yaml",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:reference/upstream-build.yaml",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at reference/upstream-build.yaml"
+    },
+    {
+      "id": "provenance_unique:config/toucan.json",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:config/toucan.json",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at config/toucan.json"
+    },
+    {
+      "id": "provenance_unique:config/toucan.keymap",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:config/toucan.keymap",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at reference/baseline/config-toucan.keymap"
+    },
+    {
+      "id": "provenance_unique:reference/upstream-west.yml",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:reference/upstream-west.yml",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at reference/upstream-west.yml"
+    },
+    {
+      "id": "provenance_unique:zephyr/module.yml",
+      "passed": true,
+      "detail": "Unique historical source and destination"
+    },
+    {
+      "id": "upstream_bytes:zephyr/module.yml",
+      "passed": true,
+      "detail": "Recorded SHA-256 and Git blob ID checked at zephyr/module.yml"
+    },
+    {
+      "id": "three_archived_originals",
+      "passed": true,
+      "detail": "All three intentionally edited source files have baseline records"
+    },
+    {
+      "id": "normalised_config_entries",
+      "passed": true,
+      "detail": "Exactly two normalized per-half files"
+    },
+    {
+      "id": "normalised_bytes:config/toucan_left.conf",
+      "passed": true,
+      "detail": "Per-half normalization remains byte-identical to source"
+    },
+    {
+      "id": "normalised_bytes:config/toucan_right.conf",
+      "passed": true,
+      "detail": "Per-half normalization remains byte-identical to source"
+    },
+    {
+      "id": "no_source_symlinks",
+      "passed": true,
+      "detail": "No symlinks/junctions outside .git"
+    },
+    {
+      "id": "no_root_config_aliases",
+      "passed": true,
+      "detail": "Redundant root-level upstream config aliases are absent"
+    },
+    {
+      "id": "side_config_matches:left",
+      "passed": true,
+      "detail": "User per-half config is a real copy of the correct shield config"
+    },
+    {
+      "id": "side_config:left:CONFIG_ZMK_POINTING",
+      "passed": true,
+      "detail": "CONFIG_ZMK_POINTING=y in source (generated .config not checked)"
+    },
+    {
+      "id": "side_config:left:CONFIG_ZMK_MOUSE",
+      "passed": true,
+      "detail": "CONFIG_ZMK_MOUSE=y in source (generated .config not checked)"
+    },
+    {
+      "id": "side_config:left:CONFIG_ZMK_BATTERY_REPORTING",
+      "passed": true,
+      "detail": "CONFIG_ZMK_BATTERY_REPORTING=y in source (generated .config not checked)"
+    },
+    {
+      "id": "side_config:left:CONFIG_ZMK_SLEEP",
+      "passed": true,
+      "detail": "CONFIG_ZMK_SLEEP=y in source (generated .config not checked)"
+    },
+    {
+      "id": "side_config:left:CONFIG_ZMK_IDLE_SLEEP_TIMEOUT",
+      "passed": true,
+      "detail": "CONFIG_ZMK_IDLE_SLEEP_TIMEOUT=3600000 in source (generated .config not checked)"
+    },
+    {
+      "id": "side_config:left:CONFIG_ZMK_IDLE_TIMEOUT",
+      "passed": true,
+      "detail": "CONFIG_ZMK_IDLE_TIMEOUT=30000 in source (generated .config not checked)"
+    },
+    {
+      "id": "side_config:left:CONFIG_ZMK_PM_SOFT_OFF",
+      "passed": true,
+      "detail": "CONFIG_ZMK_PM_SOFT_OFF=y in source (generated .config not checked)"
+    },
+    {
+      "id": "side_config:left:CONFIG_INPUT_THREAD_STACK_SIZE",
+      "passed": true,
+      "detail": "CONFIG_INPUT_THREAD_STACK_SIZE=2048 in source (generated .config not checked)"
+    },
+    {
+      "id": "side_config:left:CONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING",
+      "passed": true,
+      "detail": "CONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING=y"
+    },
+    {
+      "id": "side_config:left:CONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY",
+      "passed": true,
+      "detail": "CONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY=y"
+    },
+    {
+      "id": "side_config_matches:right",
+      "passed": true,
+      "detail": "User per-half config is a real copy of the correct shield config"
+    },
+    {
+      "id": "side_config:right:CONFIG_ZMK_POINTING",
+      "passed": true,
+      "detail": "CONFIG_ZMK_POINTING=y in source (generated .config not checked)"
+    },
+    {
+      "id": "side_config:right:CONFIG_ZMK_MOUSE",
+      "passed": true,
+      "detail": "CONFIG_ZMK_MOUSE=y in source (generated .config not checked)"
+    },
+    {
+      "id": "side_config:right:CONFIG_ZMK_BATTERY_REPORTING",
+      "passed": true,
+      "detail": "CONFIG_ZMK_BATTERY_REPORTING=y in source (generated .config not checked)"
+    },
+    {
+      "id": "side_config:right:CONFIG_ZMK_SLEEP",
+      "passed": true,
+      "detail": "CONFIG_ZMK_SLEEP=y in source (generated .config not checked)"
+    },
+    {
+      "id": "side_config:right:CONFIG_ZMK_IDLE_SLEEP_TIMEOUT",
+      "passed": true,
+      "detail": "CONFIG_ZMK_IDLE_SLEEP_TIMEOUT=3600000 in source (generated .config not checked)"
+    },
+    {
+      "id": "side_config:right:CONFIG_ZMK_IDLE_TIMEOUT",
+      "passed": true,
+      "detail": "CONFIG_ZMK_IDLE_TIMEOUT=30000 in source (generated .config not checked)"
+    },
+    {
+      "id": "side_config:right:CONFIG_ZMK_PM_SOFT_OFF",
+      "passed": true,
+      "detail": "CONFIG_ZMK_PM_SOFT_OFF=y in source (generated .config not checked)"
+    },
+    {
+      "id": "side_config:right:CONFIG_INPUT_THREAD_STACK_SIZE",
+      "passed": true,
+      "detail": "CONFIG_INPUT_THREAD_STACK_SIZE=2048 in source (generated .config not checked)"
+    },
+    {
+      "id": "left_is_central_source",
+      "passed": true,
+      "detail": "Central role defaults to y inside the left-only shield condition"
+    },
+    {
+      "id": "right_offset_6",
+      "passed": true,
+      "detail": "Right half retains column offset 6"
+    },
+    {
+      "id": "pointing_split_route",
+      "passed": true,
+      "detail": "Cirque input originates on right and is consumed by central left listener"
+    },
+    {
+      "id": "right_cirque_source",
+      "passed": true,
+      "detail": "Right source retains Cirque identity, DR pin, sensitivity and inversion"
+    },
+    {
+      "id": "display_on_left_source",
+      "passed": true,
+      "detail": "Left provides display SPI and nice_view_gem enables the Sharp display"
+    },
+    {
+      "id": "manifest_self_path",
+      "passed": true,
+      "detail": "West self checkout remains config"
+    },
+    {
+      "id": "dependency_schema",
+      "passed": true,
+      "detail": "Dependency provenance schema 1"
+    },
+    {
+      "id": "dependency_project_set",
+      "passed": true,
+      "detail": "Exactly zmk, zephyr, Cirque, rgbled, nanopb and Studio messages; no implicit direct revisions"
+    },
+    {
+      "id": "dependency_pin:cirque-input-module",
+      "passed": true,
+      "detail": "Manifest and provenance agree on a complete 40-digit Git revision"
+    },
+    {
+      "id": "no_clone_depth:cirque-input-module",
+      "passed": true,
+      "detail": "No clone-depth on exact SHA revisions"
+    },
+    {
+      "id": "dependency_path:cirque-input-module",
+      "passed": true,
+      "detail": "Manifest checkout path agrees with provenance"
+    },
+    {
+      "id": "dependency_url:cirque-input-module",
+      "passed": true,
+      "detail": "Manifest remote/repository agrees with provenance URL"
+    },
+    {
+      "id": "dependency_pin:nanopb",
+      "passed": true,
+      "detail": "Manifest and provenance agree on a complete 40-digit Git revision"
+    },
+    {
+      "id": "no_clone_depth:nanopb",
+      "passed": true,
+      "detail": "No clone-depth on exact SHA revisions"
+    },
+    {
+      "id": "dependency_path:nanopb",
+      "passed": true,
+      "detail": "Manifest checkout path agrees with provenance"
+    },
+    {
+      "id": "dependency_url:nanopb",
+      "passed": true,
+      "detail": "Manifest remote/repository agrees with provenance URL"
+    },
+    {
+      "id": "dependency_pin:zephyr",
+      "passed": true,
+      "detail": "Manifest and provenance agree on a complete 40-digit Git revision"
+    },
+    {
+      "id": "no_clone_depth:zephyr",
+      "passed": true,
+      "detail": "No clone-depth on exact SHA revisions"
+    },
+    {
+      "id": "dependency_path:zephyr",
+      "passed": true,
+      "detail": "Manifest checkout path agrees with provenance"
+    },
+    {
+      "id": "dependency_url:zephyr",
+      "passed": true,
+      "detail": "Manifest remote/repository agrees with provenance URL"
+    },
+    {
+      "id": "dependency_pin:zmk",
+      "passed": true,
+      "detail": "Manifest and provenance agree on a complete 40-digit Git revision"
+    },
+    {
+      "id": "no_clone_depth:zmk",
+      "passed": true,
+      "detail": "No clone-depth on exact SHA revisions"
+    },
+    {
+      "id": "dependency_path:zmk",
+      "passed": true,
+      "detail": "Manifest checkout path agrees with provenance"
+    },
+    {
+      "id": "dependency_url:zmk",
+      "passed": true,
+      "detail": "Manifest remote/repository agrees with provenance URL"
+    },
+    {
+      "id": "dependency_pin:zmk-rgbled-widget",
+      "passed": true,
+      "detail": "Manifest and provenance agree on a complete 40-digit Git revision"
+    },
+    {
+      "id": "no_clone_depth:zmk-rgbled-widget",
+      "passed": true,
+      "detail": "No clone-depth on exact SHA revisions"
+    },
+    {
+      "id": "dependency_path:zmk-rgbled-widget",
+      "passed": true,
+      "detail": "Manifest checkout path agrees with provenance"
+    },
+    {
+      "id": "dependency_url:zmk-rgbled-widget",
+      "passed": true,
+      "detail": "Manifest remote/repository agrees with provenance URL"
+    },
+    {
+      "id": "dependency_pin:zmk-studio-messages",
+      "passed": true,
+      "detail": "Manifest and provenance agree on a complete 40-digit Git revision"
+    },
+    {
+      "id": "no_clone_depth:zmk-studio-messages",
+      "passed": true,
+      "detail": "No clone-depth on exact SHA revisions"
+    },
+    {
+      "id": "dependency_path:zmk-studio-messages",
+      "passed": true,
+      "detail": "Manifest checkout path agrees with provenance"
+    },
+    {
+      "id": "dependency_url:zmk-studio-messages",
+      "passed": true,
+      "detail": "Manifest remote/repository agrees with provenance URL"
+    },
+    {
+      "id": "zmk_import_retained",
+      "passed": true,
+      "detail": "Retain the pinned ZMK upstream manifest import"
+    },
+    {
+      "id": "zephyr_import_blocklist",
+      "passed": true,
+      "detail": "Zephyr explicit import blocklist equals all 18 recorded upstream exclusions"
+    },
+    {
+      "id": "controlled_source_subset",
+      "passed": true,
+      "detail": "Literal includes, object aliases and guarded headers parsed; no external preprocessing"
+    },
+    {
+      "id": "includes:config/toucan.keymap",
+      "passed": true,
+      "detail": "Controlled include order and set"
+    },
+    {
+      "id": "includes:config/selenium-behaviors.dtsi",
+      "passed": true,
+      "detail": "Controlled include order and set"
+    },
+    {
+      "id": "includes:config/ergol.h",
+      "passed": true,
+      "detail": "Controlled include order and set"
+    },
+    {
+      "id": "includes:config/layers.h",
+      "passed": true,
+      "detail": "Controlled include order and set"
+    },
+    {
+      "id": "includes:config/timing.h",
+      "passed": true,
+      "detail": "Controlled include order and set"
+    },
+    {
+      "id": "no_builtin_include_shadow",
+      "passed": true,
+      "detail": "Custom helper does not shadow ZMK behaviors.dtsi"
+    },
+    {
+      "id": "single_active_keymap",
+      "passed": true,
+      "detail": "Shield fallback includes exactly the one active user keymap"
+    },
+    {
+      "id": "layer_constants",
+      "passed": true,
+      "detail": "Five explicit layer indices, 0 through 4 in priority order"
+    },
+    {
+      "id": "alias:X_UNDO",
+      "passed": true,
+      "detail": "One validated keypress: &kp LC(Z)"
+    },
+    {
+      "id": "alias:X_CUT",
+      "passed": true,
+      "detail": "One validated keypress: &kp LC(X)"
+    },
+    {
+      "id": "alias:X_COPY",
+      "passed": true,
+      "detail": "One validated keypress: &kp LC(W)"
+    },
+    {
+      "id": "alias:X_PASTE",
+      "passed": true,
+      "detail": "One validated keypress: &kp LC(V)"
+    },
+    {
+      "id": "alias:X_REDO",
+      "passed": true,
+      "detail": "One validated keypress: &kp LC(P)"
+    },
+    {
+      "id": "alias:X_CTL_W",
+      "passed": true,
+      "detail": "One validated keypress: &kp LC(T)"
+    },
+    {
+      "id": "alias:X_SAVE",
+      "passed": true,
+      "detail": "One validated keypress: &kp LC(S)"
+    },
+    {
+      "id": "alias:X_ALL",
+      "passed": true,
+      "detail": "One validated keypress: &kp LC(A)"
+    },
+    {
+      "id": "alias:X_SHTAB",
+      "passed": true,
+      "detail": "One validated keypress: &kp RS(TAB)"
+    },
+    {
+      "id": "alias:S_CARET",
+      "passed": true,
+      "detail": "One validated keypress: &kp CARET"
+    },
+    {
+      "id": "alias:S_LT",
+      "passed": true,
+      "detail": "One validated keypress: &kp NUBS"
+    },
+    {
+      "id": "alias:S_GT",
+      "passed": true,
+      "detail": "One validated keypress: &kp PIPE2"
+    },
+    {
+      "id": "alias:S_DLLR",
+      "passed": true,
+      "detail": "One validated keypress: &kp DLLR"
+    },
+    {
+      "id": "alias:S_PRCNT",
+      "passed": true,
+      "detail": "One validated keypress: &kp PRCNT"
+    },
+    {
+      "id": "alias:S_AT",
+      "passed": true,
+      "detail": "One validated keypress: &kp RPAR"
+    },
+    {
+      "id": "alias:S_AMPS",
+      "passed": true,
+      "detail": "One validated keypress: &kp AMPS"
+    },
+    {
+      "id": "alias:S_STAR",
+      "passed": true,
+      "detail": "One validated keypress: &kp STAR"
+    },
+    {
+      "id": "alias:S_SQT",
+      "passed": true,
+      "detail": "One validated keypress: &kp SQT"
+    },
+    {
+      "id": "alias:S_GRAVE",
+      "passed": true,
+      "detail": "One validated keypress: &kp GRAVE"
+    },
+    {
+      "id": "alias:S_LBRC",
+      "passed": true,
+      "detail": "One validated keypress: &kp LBRC"
+    },
+    {
+      "id": "alias:S_LPAR",
+      "passed": true,
+      "detail": "One validated keypress: &kp RA(S)"
+    },
+    {
+      "id": "alias:S_RPAR",
+      "passed": true,
+      "detail": "One validated keypress: &kp RA(D)"
+    },
+    {
+      "id": "alias:S_RBRC",
+      "passed": true,
+      "detail": "One validated keypress: &kp RBRC"
+    },
+    {
+      "id": "alias:S_EQUAL",
+      "passed": true,
+      "detail": "One validated keypress: &kp EQUAL"
+    },
+    {
+      "id": "alias:S_BSLH",
+      "passed": true,
+      "detail": "One validated keypress: &kp BSLH"
+    },
+    {
+      "id": "alias:S_PLUS",
+      "passed": true,
+      "detail": "One validated keypress: &kp PLUS"
+    },
+    {
+      "id": "alias:S_MINUS",
+      "passed": true,
+      "detail": "One validated keypress: &kp C"
+    },
+    {
+      "id": "alias:S_FSLH",
+      "passed": true,
+      "detail": "One validated keypress: &kp MINUS"
+    },
+    {
+      "id": "alias:S_DQT",
+      "passed": true,
+      "detail": "One validated keypress: &kp DQT"
+    },
+    {
+      "id": "alias:S_TILDE",
+      "passed": true,
+      "detail": "One validated keypress: &kp TILDE"
+    },
+    {
+      "id": "alias:S_LBKT",
+      "passed": true,
+      "detail": "One validated keypress: &kp LBKT"
+    },
+    {
+      "id": "alias:S_RBKT",
+      "passed": true,
+      "detail": "One validated keypress: &kp RBKT"
+    },
+    {
+      "id": "alias:S_UNDER",
+      "passed": true,
+      "detail": "One validated keypress: &kp UNDER"
+    },
+    {
+      "id": "alias:S_HASH",
+      "passed": true,
+      "detail": "One validated keypress: &kp LPAR"
+    },
+    {
+      "id": "alias:S_PIPE",
+      "passed": true,
+      "detail": "One validated keypress: &kp PIPE"
+    },
+    {
+      "id": "alias:S_EXCL",
+      "passed": true,
+      "detail": "One validated keypress: &kp RS(O)"
+    },
+    {
+      "id": "alias:S_SEMI",
+      "passed": true,
+      "detail": "One validated keypress: &kp LS(DOT)"
+    },
+    {
+      "id": "alias:S_COLON",
+      "passed": true,
+      "detail": "One validated keypress: &kp LS(N)"
+    },
+    {
+      "id": "alias:S_QMARK",
+      "passed": true,
+      "detail": "One validated keypress: &kp LS(C)"
+    },
+    {
+      "id": "alias:S_COMMA",
+      "passed": true,
+      "detail": "One validated keypress: &kp DOT"
+    },
+    {
+      "id": "alias:S_DOT",
+      "passed": true,
+      "detail": "One validated keypress: &kp N"
+    },
+    {
+      "id": "alias:S_N0",
+      "passed": true,
+      "detail": "One validated keypress: &kp N0"
+    },
+    {
+      "id": "alias:S_N1",
+      "passed": true,
+      "detail": "One validated keypress: &kp N1"
+    },
+    {
+      "id": "alias:S_N2",
+      "passed": true,
+      "detail": "One validated keypress: &kp N2"
+    },
+    {
+      "id": "alias:S_N3",
+      "passed": true,
+      "detail": "One validated keypress: &kp N3"
+    },
+    {
+      "id": "alias:S_N4",
+      "passed": true,
+      "detail": "One validated keypress: &kp N4"
+    },
+    {
+      "id": "alias:S_N5",
+      "passed": true,
+      "detail": "One validated keypress: &kp N5"
+    },
+    {
+      "id": "alias:S_N6",
+      "passed": true,
+      "detail": "One validated keypress: &kp N6"
+    },
+    {
+      "id": "alias:S_N7",
+      "passed": true,
+      "detail": "One validated keypress: &kp N7"
+    },
+    {
+      "id": "alias:S_N8",
+      "passed": true,
+      "detail": "One validated keypress: &kp N8"
+    },
+    {
+      "id": "alias:S_N9",
+      "passed": true,
+      "detail": "One validated keypress: &kp N9"
+    },
+    {
+      "id": "five_layers_in_order",
+      "passed": true,
+      "detail": "Base, Symbols, VimNav, NumRow, FnMedia"
+    },
+    {
+      "id": "positions_42:base",
+      "passed": true,
+      "detail": "Parsed 42 behavior invocations with checked arity/domains"
+    },
+    {
+      "id": "outer_columns_none:base",
+      "passed": true,
+      "detail": "Indices 0,11,12,23,24,35 are explicitly none"
+    },
+    {
+      "id": "no_shift_hrm:base",
+      "passed": true,
+      "detail": "Shift remains on the thumb; no home-row Shift"
+    },
+    {
+      "id": "positions_42:symbols",
+      "passed": true,
+      "detail": "Parsed 42 behavior invocations with checked arity/domains"
+    },
+    {
+      "id": "outer_columns_none:symbols",
+      "passed": true,
+      "detail": "Indices 0,11,12,23,24,35 are explicitly none"
+    },
+    {
+      "id": "no_shift_hrm:symbols",
+      "passed": true,
+      "detail": "Shift remains on the thumb; no home-row Shift"
+    },
+    {
+      "id": "positions_42:vim_nav",
+      "passed": true,
+      "detail": "Parsed 42 behavior invocations with checked arity/domains"
+    },
+    {
+      "id": "outer_columns_none:vim_nav",
+      "passed": true,
+      "detail": "Indices 0,11,12,23,24,35 are explicitly none"
+    },
+    {
+      "id": "no_shift_hrm:vim_nav",
+      "passed": true,
+      "detail": "Shift remains on the thumb; no home-row Shift"
+    },
+    {
+      "id": "positions_42:num_row",
+      "passed": true,
+      "detail": "Parsed 42 behavior invocations with checked arity/domains"
+    },
+    {
+      "id": "outer_columns_none:num_row",
+      "passed": true,
+      "detail": "Indices 0,11,12,23,24,35 are explicitly none"
+    },
+    {
+      "id": "no_shift_hrm:num_row",
+      "passed": true,
+      "detail": "Shift remains on the thumb; no home-row Shift"
+    },
+    {
+      "id": "positions_42:fn_media",
+      "passed": true,
+      "detail": "Parsed 42 behavior invocations with checked arity/domains"
+    },
+    {
+      "id": "outer_columns_none:fn_media",
+      "passed": true,
+      "detail": "Indices 0,11,12,23,24,35 are explicitly none"
+    },
+    {
+      "id": "no_shift_hrm:fn_media",
+      "passed": true,
+      "detail": "Shift remains on the thumb; no home-row Shift"
+    },
+    {
+      "id": "base_thumbs",
+      "passed": true,
+      "detail": "Shift, Backspace/VimNav, Escape/FnMedia, Enter/NumRow, Space/VimNav, Symbols"
+    },
+    {
+      "id": "layer_thumbs:symbols",
+      "passed": true,
+      "detail": "Reference thumb transitions, sticky modifiers and service controls"
+    },
+    {
+      "id": "layer_thumbs:vim_nav",
+      "passed": true,
+      "detail": "Reference thumb transitions, sticky modifiers and service controls"
+    },
+    {
+      "id": "layer_thumbs:num_row",
+      "passed": true,
+      "detail": "Reference thumb transitions, sticky modifiers and service controls"
+    },
+    {
+      "id": "layer_thumbs:fn_media",
+      "passed": true,
+      "detail": "Reference thumb transitions, sticky modifiers and service controls"
+    },
+    {
+      "id": "base_hid_letter_rows",
+      "passed": true,
+      "detail": "Native Ergo-L receives the agreed HID letter positions"
+    },
+    {
+      "id": "base_hrm:14",
+      "passed": true,
+      "detail": "Expected native Ergo-L HID home-row modifier mapping"
+    },
+    {
+      "id": "base_hrm:15",
+      "passed": true,
+      "detail": "Expected native Ergo-L HID home-row modifier mapping"
+    },
+    {
+      "id": "base_hrm:16",
+      "passed": true,
+      "detail": "Expected native Ergo-L HID home-row modifier mapping"
+    },
+    {
+      "id": "base_hrm:19",
+      "passed": true,
+      "detail": "Expected native Ergo-L HID home-row modifier mapping"
+    },
+    {
+      "id": "base_hrm:20",
+      "passed": true,
+      "detail": "Expected native Ergo-L HID home-row modifier mapping"
+    },
+    {
+      "id": "base_hrm:21",
+      "passed": true,
+      "detail": "Expected native Ergo-L HID home-row modifier mapping"
+    },
+    {
+      "id": "vim_key:27",
+      "passed": true,
+      "detail": "Native Ergo-L shortcut or base-return AltGr: &kp LC(W)"
+    },
+    {
+      "id": "vim_key:29",
+      "passed": true,
+      "detail": "Native Ergo-L shortcut or base-return AltGr: &kp LC(P)"
+    },
+    {
+      "id": "vim_key:41",
+      "passed": true,
+      "detail": "Native Ergo-L shortcut or base-return AltGr: &lbsk RALT RALT"
+    },
+    {
+      "id": "num_punctuation",
+      "passed": true,
+      "detail": "Number-row punctuation uses native Ergo-L HID aliases"
+    },
+    {
+      "id": "bluetooth_service:5",
+      "passed": true,
+      "detail": "Profiles 0..4 and Shift-selective clear remain accessible"
+    },
+    {
+      "id": "bluetooth_service:6",
+      "passed": true,
+      "detail": "Profiles 0..4 and Shift-selective clear remain accessible"
+    },
+    {
+      "id": "bluetooth_service:17",
+      "passed": true,
+      "detail": "Profiles 0..4 and Shift-selective clear remain accessible"
+    },
+    {
+      "id": "bluetooth_service:18",
+      "passed": true,
+      "detail": "Profiles 0..4 and Shift-selective clear remain accessible"
+    },
+    {
+      "id": "bluetooth_service:30",
+      "passed": true,
+      "detail": "Profiles 0..4 and Shift-selective clear remain accessible"
+    },
+    {
+      "id": "custom_behavior_set",
+      "passed": true,
+      "detail": "Exactly the supported Toucan behavior labels"
+    },
+    {
+      "id": "behavior_schema:hrm",
+      "passed": true,
+      "detail": "Audited compatible and number of binding cells"
+    },
+    {
+      "id": "hold_children:hrm",
+      "passed": true,
+      "detail": "Two child phandles, with parameters supplied by the hold-tap"
+    },
+    {
+      "id": "timing_source:hrm",
+      "passed": true,
+      "detail": "Decision threshold comes directly from TAP_PREFERRED_MS"
+    },
+    {
+      "id": "flavor:hrm",
+      "passed": true,
+      "detail": "Explicit reference flavor"
+    },
+    {
+      "id": "quick_tap_source:hrm",
+      "passed": true,
+      "detail": "Quick-tap only on the three reference typing/layer-tap behaviors"
+    },
+    {
+      "id": "undecided_hold:hrm",
+      "passed": true,
+      "detail": "Immediate undecided hold only on sticky modifier"
+    },
+    {
+      "id": "behavior_schema:sc",
+      "passed": true,
+      "detail": "Audited compatible and number of binding cells"
+    },
+    {
+      "id": "hold_children:sc",
+      "passed": true,
+      "detail": "Two child phandles, with parameters supplied by the hold-tap"
+    },
+    {
+      "id": "timing_source:sc",
+      "passed": true,
+      "detail": "Decision threshold comes directly from HOLD_PREFERRED_MS"
+    },
+    {
+      "id": "flavor:sc",
+      "passed": true,
+      "detail": "Explicit reference flavor"
+    },
+    {
+      "id": "quick_tap_source:sc",
+      "passed": true,
+      "detail": "Quick-tap only on the three reference typing/layer-tap behaviors"
+    },
+    {
+      "id": "undecided_hold:sc",
+      "passed": true,
+      "detail": "Immediate undecided hold only on sticky modifier"
+    },
+    {
+      "id": "behavior_schema:ltp",
+      "passed": true,
+      "detail": "Audited compatible and number of binding cells"
+    },
+    {
+      "id": "hold_children:ltp",
+      "passed": true,
+      "detail": "Two child phandles, with parameters supplied by the hold-tap"
+    },
+    {
+      "id": "timing_source:ltp",
+      "passed": true,
+      "detail": "Decision threshold comes directly from TAP_PREFERRED_MS"
+    },
+    {
+      "id": "flavor:ltp",
+      "passed": true,
+      "detail": "Explicit reference flavor"
+    },
+    {
+      "id": "quick_tap_source:ltp",
+      "passed": true,
+      "detail": "Quick-tap only on the three reference typing/layer-tap behaviors"
+    },
+    {
+      "id": "undecided_hold:ltp",
+      "passed": true,
+      "detail": "Immediate undecided hold only on sticky modifier"
+    },
+    {
+      "id": "behavior_schema:osl",
+      "passed": true,
+      "detail": "Audited compatible and number of binding cells"
+    },
+    {
+      "id": "behavior_bindings:osl",
+      "passed": true,
+      "detail": "All internal behavior references, arities and parameter domains checked"
+    },
+    {
+      "id": "zero_macro_delays:osl",
+      "passed": true,
+      "detail": "Explicit zero macro tap/wait delay"
+    },
+    {
+      "id": "behavior_schema:bsl",
+      "passed": true,
+      "detail": "Audited compatible and number of binding cells"
+    },
+    {
+      "id": "hold_children:bsl",
+      "passed": true,
+      "detail": "Two child phandles, with parameters supplied by the hold-tap"
+    },
+    {
+      "id": "timing_source:bsl",
+      "passed": true,
+      "detail": "Decision threshold comes directly from TAP_PREFERRED_MS"
+    },
+    {
+      "id": "flavor:bsl",
+      "passed": true,
+      "detail": "Explicit reference flavor"
+    },
+    {
+      "id": "quick_tap_source:bsl",
+      "passed": true,
+      "detail": "Quick-tap only on the three reference typing/layer-tap behaviors"
+    },
+    {
+      "id": "undecided_hold:bsl",
+      "passed": true,
+      "detail": "Immediate undecided hold only on sticky modifier"
+    },
+    {
+      "id": "behavior_schema:osm",
+      "passed": true,
+      "detail": "Audited compatible and number of binding cells"
+    },
+    {
+      "id": "behavior_bindings:osm",
+      "passed": true,
+      "detail": "All internal behavior references, arities and parameter domains checked"
+    },
+    {
+      "id": "zero_macro_delays:osm",
+      "passed": true,
+      "detail": "Explicit zero macro tap/wait delay"
+    },
+    {
+      "id": "behavior_schema:bsk",
+      "passed": true,
+      "detail": "Audited compatible and number of binding cells"
+    },
+    {
+      "id": "hold_children:bsk",
+      "passed": true,
+      "detail": "Two child phandles, with parameters supplied by the hold-tap"
+    },
+    {
+      "id": "timing_source:bsk",
+      "passed": true,
+      "detail": "Decision threshold comes directly from TAP_PREFERRED_MS"
+    },
+    {
+      "id": "flavor:bsk",
+      "passed": true,
+      "detail": "Explicit reference flavor"
+    },
+    {
+      "id": "quick_tap_source:bsk",
+      "passed": true,
+      "detail": "Quick-tap only on the three reference typing/layer-tap behaviors"
+    },
+    {
+      "id": "undecided_hold:bsk",
+      "passed": true,
+      "detail": "Immediate undecided hold only on sticky modifier"
+    },
+    {
+      "id": "behavior_schema:sym",
+      "passed": true,
+      "detail": "Audited compatible and number of binding cells"
+    },
+    {
+      "id": "behavior_bindings:sym",
+      "passed": true,
+      "detail": "All internal behavior references, arities and parameter domains checked"
+    },
+    {
+      "id": "morph_branches:sym",
+      "passed": true,
+      "detail": "Exactly two mod-morph branches"
+    },
+    {
+      "id": "behavior_schema:sym_shift",
+      "passed": true,
+      "detail": "Audited compatible and number of binding cells"
+    },
+    {
+      "id": "behavior_bindings:sym_shift",
+      "passed": true,
+      "detail": "All internal behavior references, arities and parameter domains checked"
+    },
+    {
+      "id": "morph_branches:sym_shift",
+      "passed": true,
+      "detail": "Exactly two mod-morph branches"
+    },
+    {
+      "id": "behavior_schema:lkp",
+      "passed": true,
+      "detail": "Audited compatible and number of binding cells"
+    },
+    {
+      "id": "behavior_bindings:lkp",
+      "passed": true,
+      "detail": "All internal behavior references, arities and parameter domains checked"
+    },
+    {
+      "id": "zero_macro_delays:lkp",
+      "passed": true,
+      "detail": "Explicit zero macro tap/wait delay"
+    },
+    {
+      "id": "behavior_schema:losm",
+      "passed": true,
+      "detail": "Audited compatible and number of binding cells"
+    },
+    {
+      "id": "behavior_bindings:losm",
+      "passed": true,
+      "detail": "All internal behavior references, arities and parameter domains checked"
+    },
+    {
+      "id": "zero_macro_delays:losm",
+      "passed": true,
+      "detail": "Explicit zero macro tap/wait delay"
+    },
+    {
+      "id": "behavior_schema:lbsk",
+      "passed": true,
+      "detail": "Audited compatible and number of binding cells"
+    },
+    {
+      "id": "hold_children:lbsk",
+      "passed": true,
+      "detail": "Two child phandles, with parameters supplied by the hold-tap"
+    },
+    {
+      "id": "timing_source:lbsk",
+      "passed": true,
+      "detail": "Decision threshold comes directly from TAP_PREFERRED_MS"
+    },
+    {
+      "id": "flavor:lbsk",
+      "passed": true,
+      "detail": "Explicit reference flavor"
+    },
+    {
+      "id": "quick_tap_source:lbsk",
+      "passed": true,
+      "detail": "Quick-tap only on the three reference typing/layer-tap behaviors"
+    },
+    {
+      "id": "undecided_hold:lbsk",
+      "passed": true,
+      "detail": "Immediate undecided hold only on sticky modifier"
+    },
+    {
+      "id": "behavior_schema:vim_prev",
+      "passed": true,
+      "detail": "Audited compatible and number of binding cells"
+    },
+    {
+      "id": "behavior_bindings:vim_prev",
+      "passed": true,
+      "detail": "All internal behavior references, arities and parameter domains checked"
+    },
+    {
+      "id": "morph_branches:vim_prev",
+      "passed": true,
+      "detail": "Exactly two mod-morph branches"
+    },
+    {
+      "id": "behavior_schema:vim_next",
+      "passed": true,
+      "detail": "Audited compatible and number of binding cells"
+    },
+    {
+      "id": "behavior_bindings:vim_next",
+      "passed": true,
+      "detail": "All internal behavior references, arities and parameter domains checked"
+    },
+    {
+      "id": "morph_branches:vim_next",
+      "passed": true,
+      "detail": "Exactly two mod-morph branches"
+    },
+    {
+      "id": "behavior_schema:bt_sel1_clr",
+      "passed": true,
+      "detail": "Audited compatible and number of binding cells"
+    },
+    {
+      "id": "behavior_bindings:bt_sel1_clr",
+      "passed": true,
+      "detail": "All internal behavior references, arities and parameter domains checked"
+    },
+    {
+      "id": "morph_branches:bt_sel1_clr",
+      "passed": true,
+      "detail": "Exactly two mod-morph branches"
+    },
+    {
+      "id": "macro_protocol:osl",
+      "passed": true,
+      "detail": "Forward macro parameter, preserve press/pause/release protocol and return to Base where required"
+    },
+    {
+      "id": "macro_protocol:osm",
+      "passed": true,
+      "detail": "Forward macro parameter, preserve press/pause/release protocol and return to Base where required"
+    },
+    {
+      "id": "macro_protocol:lkp",
+      "passed": true,
+      "detail": "Forward macro parameter, preserve press/pause/release protocol and return to Base where required"
+    },
+    {
+      "id": "macro_protocol:losm",
+      "passed": true,
+      "detail": "Forward macro parameter, preserve press/pause/release protocol and return to Base where required"
+    },
+    {
+      "id": "morph_protocol:sym",
+      "passed": true,
+      "detail": "Reference branches and modifier masking, including Shift-only AltGr and guarded Bluetooth clear"
+    },
+    {
+      "id": "morph_protocol:sym_shift",
+      "passed": true,
+      "detail": "Reference branches and modifier masking, including Shift-only AltGr and guarded Bluetooth clear"
+    },
+    {
+      "id": "morph_protocol:vim_prev",
+      "passed": true,
+      "detail": "Reference branches and modifier masking, including Shift-only AltGr and guarded Bluetooth clear"
+    },
+    {
+      "id": "morph_protocol:vim_next",
+      "passed": true,
+      "detail": "Reference branches and modifier masking, including Shift-only AltGr and guarded Bluetooth clear"
+    },
+    {
+      "id": "morph_protocol:bt_sel1_clr",
+      "passed": true,
+      "detail": "Reference branches and modifier masking, including Shift-only AltGr and guarded Bluetooth clear"
+    },
+    {
+      "id": "sticky_override:&sk",
+      "passed": true,
+      "detail": "Minimal reference override plus independent one-shot timeout; other defaults come from pinned ZMK"
+    },
+    {
+      "id": "sticky_override:&sl",
+      "passed": true,
+      "detail": "Minimal reference override plus independent one-shot timeout; other defaults come from pinned ZMK"
+    },
+    {
+      "id": "independent_timing_defaults",
+      "passed": true,
+      "detail": "Four independent decimal object defines; no coupling aliases"
+    },
+    {
+      "id": "timing_ranges",
+      "passed": true,
+      "detail": "Decision/sticky defaults positive; quick-tap non-negative"
+    },
+    {
+      "id": "scroll_layer_header_once",
+      "passed": true,
+      "detail": "Hardware source includes the shared layer indices once"
+    },
+    {
+      "id": "scroll_vimnav_only",
+      "passed": true,
+      "detail": "Touchpad scroll override is restricted to VimNav"
+    },
+    {
+      "id": "hardware_only_scroll_change",
+      "passed": true,
+      "detail": "Apart from comments/whitespace, only layer-header include and scroll-layer property differ from official DTSI"
+    },
+    {
+      "id": "physical_and_matrix_42",
+      "passed": true,
+      "detail": "Official physical order and six thumb indices retained"
+    },
+    {
+      "id": "build_board:toucan_left rgbled_adapter nice_view_gem",
+      "passed": true,
+      "detail": "Official XIAO BLE controller"
+    },
+    {
+      "id": "build_name:toucan_left rgbled_adapter nice_view_gem",
+      "passed": true,
+      "detail": "Distinct firmware artifact name"
+    },
+    {
+      "id": "no_studio_snippet:toucan_left rgbled_adapter nice_view_gem",
+      "passed": true,
+      "detail": "No Studio USB snippet"
+    },
+    {
+      "id": "build_board:toucan_right rgbled_adapter",
+      "passed": true,
+      "detail": "Official XIAO BLE controller"
+    },
+    {
+      "id": "build_name:toucan_right rgbled_adapter",
+      "passed": true,
+      "detail": "Distinct firmware artifact name"
+    },
+    {
+      "id": "no_studio_snippet:toucan_right rgbled_adapter",
+      "passed": true,
+      "detail": "No Studio USB snippet"
+    },
+    {
+      "id": "build_board:settings_reset",
+      "passed": true,
+      "detail": "Official XIAO BLE controller"
+    },
+    {
+      "id": "build_name:settings_reset",
+      "passed": true,
+      "detail": "Distinct firmware artifact name"
+    },
+    {
+      "id": "no_studio_snippet:settings_reset",
+      "passed": true,
+      "detail": "No Studio USB snippet"
+    },
+    {
+      "id": "build_three_official_targets",
+      "passed": true,
+      "detail": "Left, right and separately named reset only"
+    },
+    {
+      "id": "studio_disabled:left",
+      "passed": true,
+      "detail": "Studio explicitly disabled at build selection"
+    },
+    {
+      "id": "no_studio_config_override:left",
+      "passed": true,
+      "detail": "No contradictory per-half Studio setting"
+    },
+    {
+      "id": "studio_disabled:right",
+      "passed": true,
+      "detail": "Studio explicitly disabled at build selection"
+    },
+    {
+      "id": "no_studio_config_override:right",
+      "passed": true,
+      "detail": "No contradictory per-half Studio setting"
+    },
+    {
+      "id": "reset_no_extra_args",
+      "passed": true,
+      "detail": "Reset remains a dedicated plain settings-reset build"
+    }
+  ],
+  "warnings": [
+    "Build environment is explicitly deferred to step 5; source pins do not freeze image, SDK or Actions."
+  ],
+  "pending": []
+}

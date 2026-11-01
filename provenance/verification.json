@@ -1,0 +1,898 @@
+{
+  "schema_version": 1,
+  "scope": "official-baseline-static-source-checks",
+  "project_root": "toucan-v1-selenium-hrm",
+  "status": "pass",
+  "compilation_checked": false,
+  "physical_tests_performed": false,
+  "limits": [
+    "No compiler, generated .config or generated devicetree was checked.",
+    "Hashes and pins are compared with local provenance; no remote repository was fetched.",
+    "The six direct pins and Zephyr policy are not a resolved transitive workspace or a pinned build environment."
+  ],
+  "summary": {
+    "checks": 172,
+    "passed": 172,
+    "failed": 0,
+    "warnings": 3,
+    "pending": 0
+  },
+  "observed": {
+    "upstream_commit": "7154e0187128e493cd15785a18af1546419d5bb1",
+    "upstream_regular_files": 47,
+    "matrix_positions": 42,
+    "physical_positions": 42,
+    "populated_keymap_layers": 4,
+    "build_target_count": 3,
+    "dependency_lock": "six-direct-pins-checked-locally",
+    "build_environment_status": "deferred-to-step-5"
+  },
+  "checks": [
+    {
+      "id": "project_directory",
+      "passed": true,
+      "detail": "Project root exists"
+    },
+    {
+      "id": "upstream_identity",
+      "passed": true,
+      "detail": "Expected audited Beekeeb commit 7154e0187128e493cd15785a18af1546419d5bb1"
+    },
+    {
+      "id": "upstream_file_count",
+      "passed": true,
+      "detail": "Expected 47 unchanged upstream regular files; found 47"
+    },
+    {
+      "id": "provenance_unique:reference/upstream-build-workflow.yml",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:reference/upstream-build-workflow.yml",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:LICENSE",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:LICENSE",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:QuinqueFive_License.txt",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:QuinqueFive_License.txt",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:reference/upstream-README.md",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:reference/upstream-README.md",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/.gitkeep",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/.gitkeep",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/CMakeLists.txt",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/CMakeLists.txt",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/Kconfig.defconfig",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/Kconfig.defconfig",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/Kconfig.shield",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/Kconfig.shield",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/README.md",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/README.md",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/assets/custom_fonts.h",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/assets/custom_fonts.h",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/assets/images.c",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/assets/images.c",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/assets/quinquefive_24.c",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/assets/quinquefive_24.c",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/assets/quinquefive_8.c",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/assets/quinquefive_8.c",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/custom_status_screen.c",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/custom_status_screen.c",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/nice_view_gem.conf",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/nice_view_gem.conf",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/nice_view_gem.overlay",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/nice_view_gem.overlay",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/nice_view_gem.zmk.yml",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/nice_view_gem.zmk.yml",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/widgets/battery.c",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/widgets/battery.c",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/widgets/battery.h",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/widgets/battery.h",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/widgets/battery_peripheral.c",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/widgets/battery_peripheral.c",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/widgets/battery_peripheral.h",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/widgets/battery_peripheral.h",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/widgets/layer.c",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/widgets/layer.c",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/widgets/layer.h",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/widgets/layer.h",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/widgets/output.c",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/widgets/output.c",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/widgets/output.h",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/widgets/output.h",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/widgets/profile.c",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/widgets/profile.c",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/widgets/profile.h",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/widgets/profile.h",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/widgets/screen.c",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/widgets/screen.c",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/widgets/screen.h",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/widgets/screen.h",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/widgets/sleep.c",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/widgets/sleep.c",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/widgets/sleep.h",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/widgets/sleep.h",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/widgets/util.c",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/widgets/util.c",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/nice_view_gem/widgets/util.h",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/nice_view_gem/widgets/util.h",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/toucan/Kconfig.defconfig",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/toucan/Kconfig.defconfig",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/toucan/Kconfig.shield",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/toucan/Kconfig.shield",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/toucan/toucan.dtsi",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/toucan/toucan.dtsi",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/toucan/toucan.keymap",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/toucan/toucan.keymap",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/toucan/toucan.zmk.yml",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/toucan/toucan.zmk.yml",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/toucan/toucan_left.conf",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/toucan/toucan_left.conf",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/toucan/toucan_left.overlay",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/toucan/toucan_left.overlay",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/toucan/toucan_right.conf",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/toucan/toucan_right.conf",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:boards/shields/toucan/toucan_right.overlay",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:boards/shields/toucan/toucan_right.overlay",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:reference/upstream-build.yaml",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:reference/upstream-build.yaml",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:config/toucan.json",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:config/toucan.json",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:config/toucan.keymap",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:config/toucan.keymap",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:reference/upstream-west.yml",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:reference/upstream-west.yml",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "provenance_unique:zephyr/module.yml",
+      "passed": true,
+      "detail": "Unique source and destination"
+    },
+    {
+      "id": "upstream_bytes:zephyr/module.yml",
+      "passed": true,
+      "detail": "Compare SHA-256 and Git blob ID to local provenance"
+    },
+    {
+      "id": "normalised_config_entries",
+      "passed": true,
+      "detail": "Exactly the two per-half user configurations"
+    },
+    {
+      "id": "normalised_bytes:config/toucan_left.conf",
+      "passed": true,
+      "detail": "Real file equals the corresponding upstream shield configuration"
+    },
+    {
+      "id": "normalised_bytes:config/toucan_right.conf",
+      "passed": true,
+      "detail": "Real file equals the corresponding upstream shield configuration"
+    },
+    {
+      "id": "no_source_symlinks",
+      "passed": true,
+      "detail": "No symlinks/junctions outside .git"
+    },
+    {
+      "id": "no_root_config_aliases",
+      "passed": true,
+      "detail": "Redundant root-level upstream config aliases are absent"
+    },
+    {
+      "id": "physical_positions_42",
+      "passed": true,
+      "detail": "Found 42 physical attributes"
+    },
+    {
+      "id": "matrix_42_unique",
+      "passed": true,
+      "detail": "Found 42 RC entries / 42 unique"
+    },
+    {
+      "id": "matrix_order_and_thumb_indices",
+      "passed": true,
+      "detail": "Three 12-key rows; indices 36..41 map to RC(3,3)..RC(3,8)"
+    },
+    {
+      "id": "matrix_dimensions",
+      "passed": true,
+      "detail": "Electrical matrix is 4 by 12"
+    },
+    {
+      "id": "keymap_duplicate_matches",
+      "passed": true,
+      "detail": "User and upstream shield keymaps remain identical for this baseline"
+    },
+    {
+      "id": "official_layer_sizes",
+      "passed": true,
+      "detail": "Four official populated layers, each with 42 binding references: [42, 42, 42, 42]"
+    },
+    {
+      "id": "baseline_qwerty_42_active",
+      "passed": true,
+      "detail": "Official 42-key QWERTY base; no Selenium or six reserved keys yet"
+    },
+    {
+      "id": "side_config_matches:left",
+      "passed": true,
+      "detail": "User per-half config is a real copy of the correct shield config"
+    },
+    {
+      "id": "side_config:left:CONFIG_ZMK_POINTING",
+      "passed": true,
+      "detail": "CONFIG_ZMK_POINTING=y in source (generated .config not checked)"
+    },
+    {
+      "id": "side_config:left:CONFIG_ZMK_MOUSE",
+      "passed": true,
+      "detail": "CONFIG_ZMK_MOUSE=y in source (generated .config not checked)"
+    },
+    {
+      "id": "side_config:left:CONFIG_ZMK_BATTERY_REPORTING",
+      "passed": true,
+      "detail": "CONFIG_ZMK_BATTERY_REPORTING=y in source (generated .config not checked)"
+    },
+    {
+      "id": "side_config:left:CONFIG_ZMK_SLEEP",
+      "passed": true,
+      "detail": "CONFIG_ZMK_SLEEP=y in source (generated .config not checked)"
+    },
+    {
+      "id": "side_config:left:CONFIG_ZMK_IDLE_SLEEP_TIMEOUT",
+      "passed": true,
+      "detail": "CONFIG_ZMK_IDLE_SLEEP_TIMEOUT=3600000 in source (generated .config not checked)"
+    },
+    {
+      "id": "side_config:left:CONFIG_ZMK_IDLE_TIMEOUT",
+      "passed": true,
+      "detail": "CONFIG_ZMK_IDLE_TIMEOUT=30000 in source (generated .config not checked)"
+    },
+    {
+      "id": "side_config:left:CONFIG_ZMK_PM_SOFT_OFF",
+      "passed": true,
+      "detail": "CONFIG_ZMK_PM_SOFT_OFF=y in source (generated .config not checked)"
+    },
+    {
+      "id": "side_config:left:CONFIG_INPUT_THREAD_STACK_SIZE",
+      "passed": true,
+      "detail": "CONFIG_INPUT_THREAD_STACK_SIZE=2048 in source (generated .config not checked)"
+    },
+    {
+      "id": "side_config:left:CONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING",
+      "passed": true,
+      "detail": "CONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING=y"
+    },
+    {
+      "id": "side_config:left:CONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY",
+      "passed": true,
+      "detail": "CONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY=y"
+    },
+    {
+      "id": "side_config_matches:right",
+      "passed": true,
+      "detail": "User per-half config is a real copy of the correct shield config"
+    },
+    {
+      "id": "side_config:right:CONFIG_ZMK_POINTING",
+      "passed": true,
+      "detail": "CONFIG_ZMK_POINTING=y in source (generated .config not checked)"
+    },
+    {
+      "id": "side_config:right:CONFIG_ZMK_MOUSE",
+      "passed": true,
+      "detail": "CONFIG_ZMK_MOUSE=y in source (generated .config not checked)"
+    },
+    {
+      "id": "side_config:right:CONFIG_ZMK_BATTERY_REPORTING",
+      "passed": true,
+      "detail": "CONFIG_ZMK_BATTERY_REPORTING=y in source (generated .config not checked)"
+    },
+    {
+      "id": "side_config:right:CONFIG_ZMK_SLEEP",
+      "passed": true,
+      "detail": "CONFIG_ZMK_SLEEP=y in source (generated .config not checked)"
+    },
+    {
+      "id": "side_config:right:CONFIG_ZMK_IDLE_SLEEP_TIMEOUT",
+      "passed": true,
+      "detail": "CONFIG_ZMK_IDLE_SLEEP_TIMEOUT=3600000 in source (generated .config not checked)"
+    },
+    {
+      "id": "side_config:right:CONFIG_ZMK_IDLE_TIMEOUT",
+      "passed": true,
+      "detail": "CONFIG_ZMK_IDLE_TIMEOUT=30000 in source (generated .config not checked)"
+    },
+    {
+      "id": "side_config:right:CONFIG_ZMK_PM_SOFT_OFF",
+      "passed": true,
+      "detail": "CONFIG_ZMK_PM_SOFT_OFF=y in source (generated .config not checked)"
+    },
+    {
+      "id": "side_config:right:CONFIG_INPUT_THREAD_STACK_SIZE",
+      "passed": true,
+      "detail": "CONFIG_INPUT_THREAD_STACK_SIZE=2048 in source (generated .config not checked)"
+    },
+    {
+      "id": "left_is_central_source",
+      "passed": true,
+      "detail": "Central role defaults to y inside the left-only shield condition"
+    },
+    {
+      "id": "right_offset_6",
+      "passed": true,
+      "detail": "Right half retains column offset 6"
+    },
+    {
+      "id": "pointing_split_route",
+      "passed": true,
+      "detail": "Cirque input originates on right and is consumed by central left listener"
+    },
+    {
+      "id": "right_cirque_source",
+      "passed": true,
+      "detail": "Right source retains Cirque identity, DR pin, sensitivity and inversion"
+    },
+    {
+      "id": "display_on_left_source",
+      "passed": true,
+      "detail": "Left provides display SPI and nice_view_gem enables the Sharp display"
+    },
+    {
+      "id": "build_matrix_three_targets",
+      "passed": true,
+      "detail": "Left, right and separate settings_reset"
+    },
+    {
+      "id": "build_board:toucan_left rgbled_adapter nice_view_gem",
+      "passed": true,
+      "detail": "Official XIAO BLE board"
+    },
+    {
+      "id": "build_board:toucan_right rgbled_adapter",
+      "passed": true,
+      "detail": "Official XIAO BLE board"
+    },
+    {
+      "id": "build_board:settings_reset",
+      "passed": true,
+      "detail": "Official XIAO BLE board"
+    },
+    {
+      "id": "build_matrix_shields",
+      "passed": true,
+      "detail": "Official shield combinations only"
+    },
+    {
+      "id": "build_artifacts_distinct_and_labelled",
+      "passed": true,
+      "detail": "Three distinct reference-left, reference-right and settings-reset artifact names"
+    },
+    {
+      "id": "baseline_studio_left",
+      "passed": true,
+      "detail": "Official left baseline keeps Studio and its USB snippet"
+    },
+    {
+      "id": "no_studio:toucan_right rgbled_adapter",
+      "passed": true,
+      "detail": "No Studio snippet/options on this target"
+    },
+    {
+      "id": "no_studio:settings_reset",
+      "passed": true,
+      "detail": "No Studio snippet/options on this target"
+    },
+    {
+      "id": "manifest_self_path",
+      "passed": true,
+      "detail": "West self checkout remains config"
+    },
+    {
+      "id": "dependency_schema",
+      "passed": true,
+      "detail": "Dependency provenance schema 1"
+    },
+    {
+      "id": "dependency_project_set",
+      "passed": true,
+      "detail": "Exactly zmk, zephyr, Cirque, rgbled, nanopb and Studio messages; no implicit direct revisions"
+    },
+    {
+      "id": "dependency_pin:cirque-input-module",
+      "passed": true,
+      "detail": "Manifest and provenance agree on a complete 40-digit Git revision"
+    },
+    {
+      "id": "no_clone_depth:cirque-input-module",
+      "passed": true,
+      "detail": "No clone-depth on exact SHA revisions"
+    },
+    {
+      "id": "dependency_path:cirque-input-module",
+      "passed": true,
+      "detail": "Manifest checkout path agrees with provenance"
+    },
+    {
+      "id": "dependency_url:cirque-input-module",
+      "passed": true,
+      "detail": "Manifest remote/repository agrees with provenance URL"
+    },
+    {
+      "id": "dependency_pin:nanopb",
+      "passed": true,
+      "detail": "Manifest and provenance agree on a complete 40-digit Git revision"
+    },
+    {
+      "id": "no_clone_depth:nanopb",
+      "passed": true,
+      "detail": "No clone-depth on exact SHA revisions"
+    },
+    {
+      "id": "dependency_path:nanopb",
+      "passed": true,
+      "detail": "Manifest checkout path agrees with provenance"
+    },
+    {
+      "id": "dependency_url:nanopb",
+      "passed": true,
+      "detail": "Manifest remote/repository agrees with provenance URL"
+    },
+    {
+      "id": "dependency_pin:zephyr",
+      "passed": true,
+      "detail": "Manifest and provenance agree on a complete 40-digit Git revision"
+    },
+    {
+      "id": "no_clone_depth:zephyr",
+      "passed": true,
+      "detail": "No clone-depth on exact SHA revisions"
+    },
+    {
+      "id": "dependency_path:zephyr",
+      "passed": true,
+      "detail": "Manifest checkout path agrees with provenance"
+    },
+    {
+      "id": "dependency_url:zephyr",
+      "passed": true,
+      "detail": "Manifest remote/repository agrees with provenance URL"
+    },
+    {
+      "id": "dependency_pin:zmk",
+      "passed": true,
+      "detail": "Manifest and provenance agree on a complete 40-digit Git revision"
+    },
+    {
+      "id": "no_clone_depth:zmk",
+      "passed": true,
+      "detail": "No clone-depth on exact SHA revisions"
+    },
+    {
+      "id": "dependency_path:zmk",
+      "passed": true,
+      "detail": "Manifest checkout path agrees with provenance"
+    },
+    {
+      "id": "dependency_url:zmk",
+      "passed": true,
+      "detail": "Manifest remote/repository agrees with provenance URL"
+    },
+    {
+      "id": "dependency_pin:zmk-rgbled-widget",
+      "passed": true,
+      "detail": "Manifest and provenance agree on a complete 40-digit Git revision"
+    },
+    {
+      "id": "no_clone_depth:zmk-rgbled-widget",
+      "passed": true,
+      "detail": "No clone-depth on exact SHA revisions"
+    },
+    {
+      "id": "dependency_path:zmk-rgbled-widget",
+      "passed": true,
+      "detail": "Manifest checkout path agrees with provenance"
+    },
+    {
+      "id": "dependency_url:zmk-rgbled-widget",
+      "passed": true,
+      "detail": "Manifest remote/repository agrees with provenance URL"
+    },
+    {
+      "id": "dependency_pin:zmk-studio-messages",
+      "passed": true,
+      "detail": "Manifest and provenance agree on a complete 40-digit Git revision"
+    },
+    {
+      "id": "no_clone_depth:zmk-studio-messages",
+      "passed": true,
+      "detail": "No clone-depth on exact SHA revisions"
+    },
+    {
+      "id": "dependency_path:zmk-studio-messages",
+      "passed": true,
+      "detail": "Manifest checkout path agrees with provenance"
+    },
+    {
+      "id": "dependency_url:zmk-studio-messages",
+      "passed": true,
+      "detail": "Manifest remote/repository agrees with provenance URL"
+    },
+    {
+      "id": "zmk_import_retained",
+      "passed": true,
+      "detail": "Retain the pinned ZMK upstream manifest import"
+    },
+    {
+      "id": "zephyr_import_blocklist",
+      "passed": true,
+      "detail": "Zephyr explicit import blocklist equals all 18 recorded upstream exclusions"
+    }
+  ],
+  "warnings": [
+    "Official ADJ contains &mo TAB (keycode used as layer index). Preserved in this reference; not a build-failure claim.",
+    "Official ADJ contains &bt LSHFT (keycode used as Bluetooth command). Preserved in this reference; not a build-failure claim.",
+    "Build environment is explicitly deferred to step 5; source pins do not freeze image, SDK or Actions."
+  ],
+  "pending": []
+}

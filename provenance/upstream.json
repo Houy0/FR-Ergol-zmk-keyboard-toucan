@@ -1,0 +1,383 @@
+{
+  "schema_version": 1,
+  "prepared_on": "2026-11-01",
+  "stage": "official-baseline",
+  "upstream": {
+    "repository": "https://github.com/beekeeb/zmk-keyboard-toucan",
+    "commit": "7154e0187128e493cd15785a18af1546419d5bb1",
+    "hardware": "Toucan v1 / original, unmodified"
+  },
+  "upstream_files": [
+    {
+      "upstream_path": ".github/workflows/build.yml",
+      "local_path": "reference/upstream-build-workflow.yml",
+      "git_blob": "18f82cd5b3e3486dcb22a7e77d7fd983a2bccbf9",
+      "sha256": "b7f3f6ddfd6ef3bf1127be29b5fbc308aa484ac24158ff6c1c4fe26855255904",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "LICENSE",
+      "local_path": "LICENSE",
+      "git_blob": "6b6eb44a529f0a52ffd8a2a3c9e3df88fd83408c",
+      "sha256": "6ca05bb580b16ef123089b8254525190578b4e769841a5c5a9e5487501dff5f0",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "QuinqueFive_License.txt",
+      "local_path": "QuinqueFive_License.txt",
+      "git_blob": "6e2c876c5f33c53816a4d76b7abd3264c393b61a",
+      "sha256": "480ab80a89042cc21e408aff5dd912e3c8fd893b5b79fe31f6412674f7e14d2f",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "README.md",
+      "local_path": "reference/upstream-README.md",
+      "git_blob": "d5c974a9141a34ec0f5c403a6f7154b24fdea5aa",
+      "sha256": "54e0a01405c3e3ba9331e30dad81b118dfc87cd684a490fe6305d19df895ab8e",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/.gitkeep",
+      "local_path": "boards/shields/.gitkeep",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/nice_view_gem/CMakeLists.txt",
+      "local_path": "boards/shields/nice_view_gem/CMakeLists.txt",
+      "git_blob": "a6030123c1353f659547b78d311e637f9da4ad4e",
+      "sha256": "39dfe8db846ff39599ca25106a6421352b84e28eb95d832ca145213b0a9b35a2",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/nice_view_gem/Kconfig.defconfig",
+      "local_path": "boards/shields/nice_view_gem/Kconfig.defconfig",
+      "git_blob": "70063b9c57636d913d6d38c9c2e5a154e52799a0",
+      "sha256": "7a91f465c90fbccc14690691dfab38aefd571554b0d9c336f171b57f88610d2d",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/nice_view_gem/Kconfig.shield",
+      "local_path": "boards/shields/nice_view_gem/Kconfig.shield",
+      "git_blob": "a4e65b186f89a35969f08d34d562823e9d779e86",
+      "sha256": "b2b7eb9df46ac1304c3c77a6c28f5b177e6be551f39518b9cf091255440fcfa6",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/nice_view_gem/README.md",
+      "local_path": "boards/shields/nice_view_gem/README.md",
+      "git_blob": "e9669362eb51cd8c277743b3d3601d7d2e0359e5",
+      "sha256": "fc2ee98c929a668f1d888f9e6ac7f75214b497e1359a21cb0fe8aa958efa9c07",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/nice_view_gem/assets/custom_fonts.h",
+      "local_path": "boards/shields/nice_view_gem/assets/custom_fonts.h",
+      "git_blob": "f18ed93920be7a38a2f912218d94980807de97bf",
+      "sha256": "cac6b9068e62ce730c1372d205c5ebb38837d0ae35876e5cef19a598a01f8649",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/nice_view_gem/assets/images.c",
+      "local_path": "boards/shields/nice_view_gem/assets/images.c",
+      "git_blob": "3f80897e7bffcce0ff791deb79593d87b2b8d426",
+      "sha256": "d18218ce3c8572f3539c4171de7d72b80b9f87db43b98c5db248688d467fe470",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/nice_view_gem/assets/quinquefive_24.c",
+      "local_path": "boards/shields/nice_view_gem/assets/quinquefive_24.c",
+      "git_blob": "65bd26d744ad66360bbb78f875b4256078da3cbf",
+      "sha256": "e16888d76afbf5eba003573fda6d744e742f47ca9a7acf1a1b0ca9ab6347db84",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/nice_view_gem/assets/quinquefive_8.c",
+      "local_path": "boards/shields/nice_view_gem/assets/quinquefive_8.c",
+      "git_blob": "68b57c000d5a1d71498109e69eecad164145a7e7",
+      "sha256": "ea96a8453e82295e95d8c6428320f69fe150d13caeb9ae11230c82c0b5eb23c7",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/nice_view_gem/custom_status_screen.c",
+      "local_path": "boards/shields/nice_view_gem/custom_status_screen.c",
+      "git_blob": "d2e9c3504f83d48ab4edb526485bcd27d2075fcc",
+      "sha256": "5d24825490b3cef0d2bebf513fb61c481656d5c7f348bdc8243df3839d9da56b",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/nice_view_gem/nice_view_gem.conf",
+      "local_path": "boards/shields/nice_view_gem/nice_view_gem.conf",
+      "git_blob": "2dcf27c8af902b9514685f306afa8fc3a3738491",
+      "sha256": "36f20c3431f0093c29e1619847380c9658affe246a1a110594c33ccdf4795701",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/nice_view_gem/nice_view_gem.overlay",
+      "local_path": "boards/shields/nice_view_gem/nice_view_gem.overlay",
+      "git_blob": "ae477b63749632ea28c2d871476cd32e9e7f75ab",
+      "sha256": "5f33f2bdb4ddbaf5c9a0b78bff1723633601603aae2b94d45d60fc2261a2720c",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/nice_view_gem/nice_view_gem.zmk.yml",
+      "local_path": "boards/shields/nice_view_gem/nice_view_gem.zmk.yml",
+      "git_blob": "1ff7e9e49632c18b52f1f6cd36b2637f70240a93",
+      "sha256": "456bfeb28d8d68c7c5ac008cbbae65e881223b71b59f85240b4fecf618a756bc",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/nice_view_gem/widgets/battery.c",
+      "local_path": "boards/shields/nice_view_gem/widgets/battery.c",
+      "git_blob": "5d69ac120e14b8ae362a1ddbf652a8226e14cd33",
+      "sha256": "b8b4d26d8711a73d42bcd52e90443d5cd151480e71565dac9686c41687a559f7",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/nice_view_gem/widgets/battery.h",
+      "local_path": "boards/shields/nice_view_gem/widgets/battery.h",
+      "git_blob": "7ad0a0cee612452c1c3768a2b4cd2f607dc60a65",
+      "sha256": "e8ed3c88fd44394d01b79223a6f5c3702b93a56ad51220d606919cfd39658469",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/nice_view_gem/widgets/battery_peripheral.c",
+      "local_path": "boards/shields/nice_view_gem/widgets/battery_peripheral.c",
+      "git_blob": "07fff1f23801a26f7943bb527569a6b7c917e973",
+      "sha256": "f3bc4bff3e3ba87f7f14912fcd53b2b9107da483fbad6d13aac5fa763b0cc187",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/nice_view_gem/widgets/battery_peripheral.h",
+      "local_path": "boards/shields/nice_view_gem/widgets/battery_peripheral.h",
+      "git_blob": "c8cefb5ae0f17950328c9ecf1f1bfdd0db037aa9",
+      "sha256": "861239cb90c238a2d02d6a83f657ac3404d14d18a6b9190f27e7b49bef8290a7",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/nice_view_gem/widgets/layer.c",
+      "local_path": "boards/shields/nice_view_gem/widgets/layer.c",
+      "git_blob": "834f83919f3b7464777aa516bef7ee15184c71be",
+      "sha256": "44b2848c8865ff54d6c659a5caa1e14fb2003aa0daf682f104a6e4fa68112914",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/nice_view_gem/widgets/layer.h",
+      "local_path": "boards/shields/nice_view_gem/widgets/layer.h",
+      "git_blob": "7fbeae5a6a21c0154bbaab19e63739b6d671a237",
+      "sha256": "6526183dff37bc870a0651eaba8153bcbd4c1a313dcc0018a4c591157b7c9f94",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/nice_view_gem/widgets/output.c",
+      "local_path": "boards/shields/nice_view_gem/widgets/output.c",
+      "git_blob": "1627ea0baa85c2fe5b1a3aa31ceafa4b50f95b18",
+      "sha256": "834dfb9853b9121d12e1b410b3155387b70c5b47ee796ed1db718fdf566c00a5",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/nice_view_gem/widgets/output.h",
+      "local_path": "boards/shields/nice_view_gem/widgets/output.h",
+      "git_blob": "24dfbecaffccd14d70e1a0ea35c4bad8724a2a7e",
+      "sha256": "8e9f24604622585ba26d35edff670da52835c59b0b7e2e40a0eca4e0b7d283be",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/nice_view_gem/widgets/profile.c",
+      "local_path": "boards/shields/nice_view_gem/widgets/profile.c",
+      "git_blob": "8454d9e30078115971a34c5c9428066574c741ec",
+      "sha256": "787b653885f7e5687d498df116a9825683d545e4cd902abc955ab0ac25b6d2b9",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/nice_view_gem/widgets/profile.h",
+      "local_path": "boards/shields/nice_view_gem/widgets/profile.h",
+      "git_blob": "89b07175f90f3d85c77c182c1b20d41ac9e963ce",
+      "sha256": "cc07253dd629d714428d55c240824c3f0a8dc3702d6e6443620da06305840bea",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/nice_view_gem/widgets/screen.c",
+      "local_path": "boards/shields/nice_view_gem/widgets/screen.c",
+      "git_blob": "1acb3a0c0b71088deef9162e2ab5e00cb9edbe04",
+      "sha256": "353ce8246f3fdd2a69c869d34e2eeb630bceab212d54e03b863d64db484dc8b0",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/nice_view_gem/widgets/screen.h",
+      "local_path": "boards/shields/nice_view_gem/widgets/screen.h",
+      "git_blob": "ced76e315b53a917edc446e2f7daa68e950ca585",
+      "sha256": "53c24eac130f904fa6b0cf86b0ba8f0450c1db0e44dcbd9ffb3b4b7b12b6166a",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/nice_view_gem/widgets/sleep.c",
+      "local_path": "boards/shields/nice_view_gem/widgets/sleep.c",
+      "git_blob": "c09ded3b42aae936c8622cc4e5d964ba8e4b3796",
+      "sha256": "8175db346eb1909b97f5089b86283c648d4fbeb4fac94c31a03e72a3d19720e4",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/nice_view_gem/widgets/sleep.h",
+      "local_path": "boards/shields/nice_view_gem/widgets/sleep.h",
+      "git_blob": "f6a86e41787c1a7cfe4b6580e5365cfce6ddc234",
+      "sha256": "aba26227d20e5c16a8bafb372c0a879d5d9fab98bcccc7c96ae4eeef4eeaa2f3",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/nice_view_gem/widgets/util.c",
+      "local_path": "boards/shields/nice_view_gem/widgets/util.c",
+      "git_blob": "209731a7cd23ad92c1a58b01398cb5530a959fad",
+      "sha256": "d7b141ba75e015268e28e825fd9506fa80e64cc31d85d211dd0d2bc10e99d35a",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/nice_view_gem/widgets/util.h",
+      "local_path": "boards/shields/nice_view_gem/widgets/util.h",
+      "git_blob": "10550d987d3be197223c91d1014e877f83a22f63",
+      "sha256": "40a010267fcb0bff640582b140fface91b9fee897c52643ce3be381778eefc3a",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/toucan/Kconfig.defconfig",
+      "local_path": "boards/shields/toucan/Kconfig.defconfig",
+      "git_blob": "036d11c3ee632793c6ab184aa61947fd7d72b2fc",
+      "sha256": "066386fbbdf45c8cb82fe4a707b5ff79ed98efbb9ec06b425ee52f9ee5991584",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/toucan/Kconfig.shield",
+      "local_path": "boards/shields/toucan/Kconfig.shield",
+      "git_blob": "3338d7538ae6d55c7d13973edb3e754a080538ef",
+      "sha256": "bf38d46bdfc6a50637a028b6da1f3076f94adff602b9c767e8dd5534e7dc8d7e",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/toucan/toucan.dtsi",
+      "local_path": "boards/shields/toucan/toucan.dtsi",
+      "git_blob": "b2620014455b8ed852cda25645e7b86a2962cc7b",
+      "sha256": "48aff97276fdf69280d02d8dec14dc388209707b029b3b8dd4edba4be42483f3",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/toucan/toucan.keymap",
+      "local_path": "boards/shields/toucan/toucan.keymap",
+      "git_blob": "924f9a43528fcd2eab65e86eb9a90dc3cc80d3fa",
+      "sha256": "c6c0ba57b75c20ac4f61ac87f0cb189332beba41c94c62f8395f6c1cafaf9796",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/toucan/toucan.zmk.yml",
+      "local_path": "boards/shields/toucan/toucan.zmk.yml",
+      "git_blob": "b2fe234788e6c2713841db3942c96939c85404ef",
+      "sha256": "9ce27b7373e58fcaada276849211b605d3a11b561681b9e7cf64733c088b6148",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/toucan/toucan_left.conf",
+      "local_path": "boards/shields/toucan/toucan_left.conf",
+      "git_blob": "bbd7888332edab78474e9d9b3618d67e9ea9761e",
+      "sha256": "7fc844e9853a83af5f31935097793f3960a906ff5ad279a36fbe27be0df05ee1",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/toucan/toucan_left.overlay",
+      "local_path": "boards/shields/toucan/toucan_left.overlay",
+      "git_blob": "56619a0b2da86d337933130d1027cfb4f4968efc",
+      "sha256": "82684e6967ceea2f2ef1d2e4ec3599b362c0f41e1bc6346d46126e1f8ba06f9a",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/toucan/toucan_right.conf",
+      "local_path": "boards/shields/toucan/toucan_right.conf",
+      "git_blob": "7a294a6fb43250181b9a772e25fa6eba3f15f0cb",
+      "sha256": "7dcfb9f89a36a5aee22f4347e9d4c88b59ebf1a54d6a74dd32fbe05989226d19",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "boards/shields/toucan/toucan_right.overlay",
+      "local_path": "boards/shields/toucan/toucan_right.overlay",
+      "git_blob": "5e1f7fff82979194100f9d3b65ef44bc445c00d3",
+      "sha256": "a8ea62975802afac26d6a9ab94cf2de859f8eed1b8c040a0a98343be5445838c",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "build.yaml",
+      "local_path": "reference/upstream-build.yaml",
+      "git_blob": "a74ff3a5e7a108e5b98a06b2241a141464da241e",
+      "sha256": "a93ff9c1ecdd7e454315f54898a19f0b14fc1c0249dfdbfc2608170f0feac2a5",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "config/toucan.json",
+      "local_path": "config/toucan.json",
+      "git_blob": "d99a2b7bef7a7b34cfda697d2d629c2954409efd",
+      "sha256": "1aa0e03a5baded7f418fb4d3bd673aa1620ce52cf3d61f7c0eb0a8620d807638",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "config/toucan.keymap",
+      "local_path": "config/toucan.keymap",
+      "git_blob": "924f9a43528fcd2eab65e86eb9a90dc3cc80d3fa",
+      "sha256": "c6c0ba57b75c20ac4f61ac87f0cb189332beba41c94c62f8395f6c1cafaf9796",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "config/west.yml",
+      "local_path": "reference/upstream-west.yml",
+      "git_blob": "66bb6d160234f5d187d05237534338aa4a12d72b",
+      "sha256": "872c7b484dc9eb4d3bd761dbf0f096805c8202575e09db8b3041f93803130ac2",
+      "mode": "100644"
+    },
+    {
+      "upstream_path": "zephyr/module.yml",
+      "local_path": "zephyr/module.yml",
+      "git_blob": "1cc2b356238c1d926a82ccdc532ecb095c3fac19",
+      "sha256": "947c9cacae9fe5c3f21fa4464bbc3c46288390550313357982bd3c18314dcb17",
+      "mode": "100644"
+    }
+  ],
+  "upstream_symlinks_not_copied": [
+    {
+      "path": "config/toucan_left.conf",
+      "target": "../boards/shields/toucan/toucan.conf",
+      "git_blob": "43e730d6d2343c72035e546b89bc95c12c08d510"
+    },
+    {
+      "path": "config/toucan_right.conf",
+      "target": "../boards/shields/toucan/toucan.conf",
+      "git_blob": "43e730d6d2343c72035e546b89bc95c12c08d510"
+    },
+    {
+      "path": "toucan_left.conf",
+      "target": "boards/shields/toucan/toucan_left.conf",
+      "git_blob": "c265227b708489d7c6964b0c164fea578c3c0ce4"
+    },
+    {
+      "path": "toucan_right.conf",
+      "target": "boards/shields/toucan/toucan_right.conf",
+      "git_blob": "860b84b99881c00494d7288015268499c7cd0e6e"
+    }
+  ],
+  "normalised_files": [
+    {
+      "local_path": "config/toucan_left.conf",
+      "source_path": "boards/shields/toucan/toucan_left.conf",
+      "sha256": "7fc844e9853a83af5f31935097793f3960a906ff5ad279a36fbe27be0df05ee1",
+      "reason": "Replace dangling upstream symlink with the real per-half configuration."
+    },
+    {
+      "local_path": "config/toucan_right.conf",
+      "source_path": "boards/shields/toucan/toucan_right.conf",
+      "sha256": "7dcfb9f89a36a5aee22f4347e9d4c88b59ebf1a54d6a74dd32fbe05989226d19",
+      "reason": "Replace dangling upstream symlink with the real per-half configuration."
+    }
+  ],
+  "policy": {
+    "hardware_files": "byte-identical to the audited upstream commit",
+    "keymap": "official baseline; Selenium not implemented at this stage",
+    "studio": "kept enabled on the official left baseline",
+    "remote_writes": false
+  }
+}
