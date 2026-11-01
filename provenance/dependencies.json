@@ -66,10 +66,24 @@
   "west_policy": {
     "zmk_import": "app/west.yml",
     "zephyr_name_blocklist": [
-      "ci-tools", "hal_altera", "hal_cypress", "hal_infineon",
-      "hal_microchip", "hal_nxp", "hal_openisa", "hal_silabs",
-      "hal_xtensa", "hal_st", "hal_ti", "loramac-node", "mcuboot",
-      "mcumgr", "net-tools", "openthread", "edtt", "trusted-firmware-m"
+      "ci-tools",
+      "hal_altera",
+      "hal_cypress",
+      "hal_infineon",
+      "hal_microchip",
+      "hal_nxp",
+      "hal_openisa",
+      "hal_silabs",
+      "hal_xtensa",
+      "hal_st",
+      "hal_ti",
+      "loramac-node",
+      "mcuboot",
+      "mcumgr",
+      "net-tools",
+      "openthread",
+      "edtt",
+      "trusted-firmware-m"
     ],
     "nanopb_precedence": "Explicit top-level ZMK fork and path override Zephyr optional nanopb",
     "sha_revisions_have_no_clone_depth": true,
@@ -77,8 +91,8 @@
     "frozen_resolved_manifest": "Generate and archive west manifest --freeze after workspace download at build time"
   },
   "build_environment": {
-    "status": "deferred-to-step-5",
-    "reason": "GitHub Actions, build image, SDK and tools will be pinned and recorded before the first build",
+    "status": "pinned-awaiting-first-build",
+    "record": "provenance/build-environment.json",
     "local_compilation_performed": false,
     "binary_reproducibility_demonstrated": false
   }

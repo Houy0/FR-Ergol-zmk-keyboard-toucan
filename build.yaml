@@ -1,4 +1,4 @@
-# Toucan v1 Selenium HRM only. Source-stage matrix; first compilation is step 5.
+# Toucan v1 Selenium HRM only. Consumed by scripts/ci_build.py in GitHub Actions.
 # Studio is disabled so compiled keymap files remain the configuration source.
 include:
   - board: seeeduino_xiao_ble

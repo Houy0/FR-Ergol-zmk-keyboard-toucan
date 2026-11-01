@@ -1,6 +1,9 @@
 .west/
 build/
 build-*/
+/artifacts/
+/incoming/
+/final/
 firmware/
 .venv/
 __pycache__/

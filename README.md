@@ -29,7 +29,7 @@ Ce contrôle vérifie les invariants des sources et les contraintes du portage. 
 
 ## Limite actuelle et suite
 
-Aucun fichier UF2 n’est livré à cette étape. La publication de la branche `selenium-hrm` dans le fork existant est autorisée ; les compilations GitHub Actions restent prévues à l’étape 5. L’image de construction, les versions des outils et les actions seront figées avant cette première compilation ; une identité binaire reproductible n’est pas encore démontrée.
+L’étape 5 prépare les compilations GitHub Actions sur `selenium-hrm`. L’image ARM pour Zephyr 3.5, son SDK et les actions sont fixés par empreinte. Deux constructions indépendantes sans cache doivent produire les trois mêmes UF2 avant leur livraison. Les configurations et devicetrees générés seront contrôlés et archivés avec les journaux. Une compilation réussie ne valide pas les gestes sur le clavier : les essais physiques restent nécessaires.
 
 Le socle officiel figé à l’étape 1 reste identifiable dans les archives et la provenance. Son ancien vérificateur `scripts/verify_baseline.py` reste destiné à cette version témoin ; il n’est pas le vérificateur de la configuration Selenium courante.
 
@@ -45,4 +45,4 @@ Le socle officiel figé à l’étape 1 reste identifiable dans les archives et 
 - [Provenance du support Beekeeb](provenance/upstream.json)
 - [Versions fixées](provenance/dependencies.json)
 
-Les fichiers d’origine remplacés sont conservés sous `reference/baseline/`. [Les notices tierces](THIRD_PARTY_NOTICES.md) accompagnent les adaptations. La nouvelle branche repart du commit officiel audité ; elle ne reprend pas les modifications de l’ancien essai conservé dans `main`. Aucun workflow actif n’est inclus à cette étape. Les manipulations techniques et corrections sont assurées par l’assistant ; l’utilisateur conserve les arbitrages et les essais physiques.
+Les fichiers d’origine remplacés sont conservés sous `reference/baseline/`. [Les notices tierces](THIRD_PARTY_NOTICES.md) accompagnent les adaptations. La nouvelle branche repart du commit officiel audité ; elle ne reprend pas les modifications de l’ancien essai conservé dans `main`. Le workflow Selenium cible uniquement `selenium-hrm`. Les manipulations techniques et corrections sont assurées par l’assistant ; l’utilisateur conserve les arbitrages et les essais physiques.

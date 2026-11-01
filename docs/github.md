@@ -9,7 +9,7 @@ Organisation autorisée par l’utilisateur le **1er novembre 2026**, pour l’�
 | Base de départ | Commit officiel Beekeeb `7154e0187128e493cd15785a18af1546419d5bb1` |
 | Ancien essai | Branche `main` conservée avec son contenu et son historique |
 | Branche par défaut du dépôt | Inchangée à cette étape |
-| Compilation | Aucun workflow actif dans la nouvelle branche à l’étape 4 ; GitHub Actions prévu à l’étape 5 |
+| Compilation | GitHub Actions sur `selenium-hrm` uniquement ; environnement fixé et deux constructions indépendantes à l’étape 5 |
 
 La nouvelle branche utilise le support officiel puis le portage validé à l’étape 3. Les modifications non fonctionnelles de l’ancien essai ne sont pas intégrées. Les deux versions coexistent dans le même fork.
 

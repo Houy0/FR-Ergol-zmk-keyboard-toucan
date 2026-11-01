@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "recorded_on": "2026-11-01",
+  "image": "docker.io/zmkfirmware/zmk-build-arm@sha256:cd960ebaf95cbf73219f3ad975020b83df234ed699b394bd59af16d59580daa9",
+  "platform": "linux/amd64",
+  "image_source_tag_observed": "3.5-branch",
+  "image_index_digest_observed": "sha256:840526f03c19c286b614d5cb97b11242ae19e468fc2ef2f095f6cf0465fa1c5b",
+  "dockerfile_repository": "https://github.com/zmkfirmware/zmk-docker",
+  "dockerfile_revision_label": "f93290b3ab1a7322de707c7b9be0734ef3e79395",
+  "zephyr_requirements_version_in_image": "3.5.0",
+  "sdk_version_in_image_history": "0.16.3",
+  "actions": {
+    "actions/checkout": "11d5960a326750d5838078e36cf38b85af677262",
+    "actions/upload-artifact": "ea165f8d65b6e75b540449e92b4886f43607fa02",
+    "actions/download-artifact": "d3f86a106a0bac45b974a628896c90dbdf5c8093"
+  },
+  "source_resolution": "west update with immutable source revisions; frozen resolved manifest archived per build",
+  "package_installation_during_build": false,
+  "build_cache": false,
+  "clean_build_copies": 2,
+  "source_date_epoch": "Git source commit timestamp",
+  "runner": "ubuntu-24.04 (GitHub-managed host, not an immutable VM image)",
+  "limits": [
+    "The immutable container fixes its installed SDK and software; the actual tool versions are recorded by each build.",
+    "The GitHub host kernel and hosted runner image remain managed by GitHub.",
+    "Binary reproducibility is only confirmed for the exact source commit after the two clean outputs have been compared.",
+    "No physical hardware behavior is established by compilation or binary comparison."
+  ],
+  "evidence_urls": [
+    "https://hub.docker.com/v2/repositories/zmkfirmware/zmk-build-arm/tags/3.5-branch",
+    "https://registry-1.docker.io/v2/zmkfirmware/zmk-build-arm/manifests/sha256:cd960ebaf95cbf73219f3ad975020b83df234ed699b394bd59af16d59580daa9",
+    "https://api.github.com/repos/actions/checkout/git/ref/tags/v4",
+    "https://api.github.com/repos/actions/upload-artifact/git/ref/tags/v4",
+    "https://api.github.com/repos/actions/download-artifact/git/ref/tags/v4"
+  ]
+}

@@ -1,0 +1,89 @@
+name: Build Toucan v1 Selenium HRM
+
+on:
+  push:
+    branches: [selenium-hrm]
+  pull_request:
+    branches: [selenium-hrm]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: toucan-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Clean build ${{ matrix.clean_pass }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        clean_pass: [1, 2]
+    container:
+      image: docker.io/zmkfirmware/zmk-build-arm@sha256:cd960ebaf95cbf73219f3ad975020b83df234ed699b394bd59af16d59580daa9
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Build all three targets and verify generated files
+        run: python3 scripts/ci_build.py --pass-index ${{ matrix.clean_pass }}
+      - name: Save firmware and diagnostics for this clean pass
+        if: ${{ always() }}
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: toucan-clean-pass-${{ matrix.clean_pass }}
+          path: artifacts/pass-${{ matrix.clean_pass }}/
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 14
+
+  compare:
+    name: Compare independent clean firmware outputs
+    needs: build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    container:
+      image: docker.io/zmkfirmware/zmk-build-arm@sha256:cd960ebaf95cbf73219f3ad975020b83df234ed699b394bd59af16d59580daa9
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Checkout comparison script
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Download clean pass 1
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: toucan-clean-pass-1
+          path: incoming/pass-1
+      - name: Download clean pass 2
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: toucan-clean-pass-2
+          path: incoming/pass-2
+      - name: Compare UF2 bytes
+        run: python3 scripts/ci_compare.py --pass1 incoming/pass-1 --pass2 incoming/pass-2 --output final
+      - name: Save binary comparison report
+        if: ${{ always() }}
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: toucan-reproducibility-report
+          path: final/reproducibility.json
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Save matching firmware files
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: toucan-v1-selenium-firmware
+          path: final/firmware/
+          if-no-files-found: error
+          retention-days: 14

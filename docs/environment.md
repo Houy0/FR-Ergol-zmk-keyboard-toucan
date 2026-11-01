@@ -1,26 +1,44 @@
 # Environnement de compilation
 
-État vérifié sur le poste Windows le **1er novembre 2026**.
+Le build est exécuté dans **GitHub Actions**, sur la branche `selenium-hrm`.
+Aucune installation de WSL, Docker ou de SDK sur le poste Windows n’est nécessaire.
 
-| Élément | Résultat |
-|---|---|
-| Git | Disponible dans le runtime Codex. |
-| Python | Interpréteur réel **3.12.14** disponible dans le runtime Codex ; pip **26.2.2**. Les commandes usuelles `python` et `python3` pointent vers les alias WindowsApps. |
-| WSL | L’exécutable Windows existe, mais sa commande d’inventaire indique explicitement que WSL n’est pas installé. Aucune distribution utilisable identifiée. |
-| CMake, Ninja, West | Absents du PATH et des emplacements usuels contrôlés. Les modules Python correspondants et `elftools` sont également absents de l’interpréteur vérifié. |
-| Compilateur ARM / SDK Zephyr | Aucun outil ou SDK trouvé dans les emplacements usuels contrôlés ; variables d’environnement Zephyr non définies. |
-| Docker | Commande et installation usuelle non trouvées. |
+## Environnement fixé à l’étape 5
 
-Cette recherche était ciblée : commandes disponibles, répertoires d’installation usuels et runtime Codex courant. Elle ne constitue pas un inventaire exhaustif du disque. Aucun refus d’accès n’a empêché ces contrôles ; l’absence de WSL est déclarée par Windows.
+- Image de compilation ZMK pour **Zephyr 3.5**, architecture hôte amd64,
+  fixée par digest `sha256:cd960ebaf95cbf73219f3ad975020b83df234ed699b394bd59af16d59580daa9`.
+- **SDK Zephyr 0.16.3**, présent dans l’image. Les versions réelles de CMake,
+  Ninja, west, Python et du compilateur sont conservées à chaque construction.
+- Actions checkout, upload-artifact et download-artifact fixées par SHA Git complet.
+- Les dépendances applicatives restent celles de `config/west.yml`, fixées par SHA.
+  Le manifeste complet résolu est archivé avec les résultats.
+- Aucun téléchargement de paquet Python ou système durant le build et aucun cache
+  de dépendances ou de compilation restauré.
 
-## Voie de compilation retenue pour la suite
+Les empreintes et leurs sources de vérification sont conservées dans
+[`provenance/build-environment.json`](../provenance/build-environment.json).
+Le tag `stable` observé pointait vers l’environnement Zephyr 4.1 : il n’a pas été
+retenu pour ce projet basé sur Zephyr 3.5.
 
-La première compilation est prévue dans **GitHub Actions**, après accord explicite sur la création ou la modification du dépôt distant. L’absence de chaîne locale ne bloque donc pas la préparation et la revue du socle. Aucune installation Windows, WSL ou SDK n’est nécessaire à cette étape.
+## Vérifications de compilation
 
-Les contrôles locaux de fichiers, de provenance et de configuration restent distincts d’une compilation. Aucun build n’a été exécuté et aucun firmware issu de ce socle n’est actuellement disponible pour le flash.
+Deux jobs indépendants construisent chacun les firmwares **gauche**, **droite** et
+**settings-reset** à partir des mêmes sources. Les chemins de compilation sont
+constants et `SOURCE_DATE_EPOCH` est fixé à la date du commit source.
 
-Les révisions directes retenues doivent rester identifiables dans le manifeste et le workflow. Cela ne démontre pas à lui seul le verrouillage des dépendances transitives, de l’image de compilation ou du SDK. La première exécution devra conserver ses journaux et les versions effectivement utilisées avant de conclure à la reproductibilité.
+Les configurations Kconfig et devicetrees générés, les outils utilisés, le manifeste
+west résolu, les journaux et les contrôles des UF2 sont conservés en artefacts.
+Un dernier job compare les trois fichiers UF2 des deux constructions avant de
+publier le lot de firmwares utilisable pour l’étape de préparation au flash.
 
-## Actions réalisées sur le poste
+La comparaison démontre une identité binaire pour **ce commit et ces deux builds**.
+Elle ne garantit pas à elle seule tous les environnements futurs : le noyau et
+l’image du runner hôte restent gérés par GitHub. Le fonctionnement des touches,
+des gestes sticky/HRM, du Bluetooth, de l’écran et du pavé exige les essais matériels.
 
-Lecture de l’état des outils et vérification du Python fourni avec Codex uniquement : aucune installation, modification de configuration système, création de distribution WSL ou compilation locale.
+## Poste Windows
+
+Le contrôle initial du 1er novembre 2026 a identifié Git et Python 3.12.14 dans
+le runtime Codex, sans chaîne locale west/CMake/Ninja/SDK, Docker ou distribution
+WSL utilisable. La préparation du projet et les contrôles statiques s’exécutent
+localement ; la compilation ARM s’exécute dans GitHub Actions.
